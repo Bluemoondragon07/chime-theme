@@ -5,19 +5,6 @@ A lightweight theme for Obsidian designed to be simple yet highly customizable.
 ![](themes.gif)
 ## ✒️ Customizability (with Style Settings plug-in)
 - 12 different color schemes
-  - Macaroon
-  - Ash
-  - Spring
-  - Novelist
-  - Anytype
-  - Celestial
-  - Notion
-  - Nord
-  - Solarized
-  - Gruvbox
-  - Obsidian
-  - Light & Bright
-  </details>
 - Choose between the Card and Classic layout styles.
 - Options for blockquotes, headings, checkboxes, and more.  
 ## ✅ Simplicity
