@@ -9,7 +9,7 @@ A lightweight theme for Obsidian designed to be simple yet highly customizable.
   - Spring
   - Novelist
   - Anytype
-  - Celestiale
+  - Celestial
   - Notion
   - Nord
   - Solarized
