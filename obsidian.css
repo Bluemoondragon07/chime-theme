@@ -444,7 +444,7 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
     --h6-size: 1em;
 }
 /* ----- colorful headings class */
-body .colorful-headings {
+body.colorful-headings {
     --h1-color: var(--color-accent-2);
     --h2-color: hsl(calc(var(--accent-h) + 20), calc(var(--accent-s) - 5%), calc(var(--accent-l) - 2%));
     --h3-color: hsl(calc(var(--accent-h) + 35), calc(var(--accent-s) - 10%), calc(var(--accent-l) - 4%));
