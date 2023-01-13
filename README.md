@@ -2,8 +2,8 @@
 ![](Macaroon.png)
 A lightweight theme for Obsidian designed to be simple yet highly customizable.
 # Features
-## ✒️ Customizability
-- 12 different color schemes (with the Style Settings plug-in)
+## ✒️ Customizability (with Style Settings plug-in)
+- 12 different color schemes
   - Macaroon
   - Ash
   - Spring
