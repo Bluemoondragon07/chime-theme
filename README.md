@@ -1,5 +1,5 @@
 # 🔔 Chime
-![](Chime-large.png)
+![](Macaroon.png)
 A lightweight theme for Obsidian designed to be simple yet highly customizable.
 # Features
 ## ✒️ Customizability
@@ -37,4 +37,17 @@ The spectacular cards CSS class was originally created for the Minimal Theme by 
 <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy kepano a coffee&emoji=&slug=kepano&button_colour=6a8695&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
 
 This class will make items in dataview tables show up in a card-like grid. To use, type `cssClasses: cards` in the frontmatter.
-
+# ⭐ Credits
+A special thanks to...
+- kepano for their amazing Minimal theme
+  - Inspiration
+  - cards CSS class
+- Anubis for the phenomenal AnuPpuccin theme
+  - rainbow folders option
+- The developers of *Obsidian*.
+  - I wouldn't have learned CSS without this app.
+# 📋 To-Do
+- [ ] update README
+- [ ] Add header bottom border option
+- [ ] Add custom link and tag options
+ 
