@@ -7,7 +7,6 @@ A lightweight theme for Obsidian designed to be simple yet highly customizable.
 - 12 different color schemes
 - Choose between the Card and Classic layout styles.
 - Options for blockquotes, headings, checkboxes, and more.  
-- 4 CSS classes to format your notes 
 ## ✅ Simplicity
 Chime was designed with a special intention to not overwhelm you with options. Customizability is given for only the most important components.
 ## 🚩 CSS Classes
