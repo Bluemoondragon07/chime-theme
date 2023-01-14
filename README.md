@@ -16,7 +16,7 @@ Format your note like a wiki page. This class floats images, blockquotes, and ca
 
 ![](wiki-page.png)
 ### Novel Class
-Format your note like a page in a book. This class changes the font, indentation, and paragraph spacing. Pressing enter once creates an indented paragraph, while pressing enter twice creates a normal paragraph without an indent (great if you don't like indented dialogue). Both paragraphs are evenly spaced in preview mode. 
+Format your note like a page in a book. This class changes the font, indentation, and paragraph spacing. Pressing enter once creates a normal paragraph without an indent (great if you don't like indented dialogue), while pressing enter twice, like you would usually create a paragraph in Obsidian, creates an indented paragraph.. Both paragraphs are evenly spaced in preview mode. 
 To use, type `Cssclasses: novel` in the frontmatter of a note.
 
 ![](novel.png)
