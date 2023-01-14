@@ -496,7 +496,7 @@ body.colorful-headings.theme-crystal {
     --callout-title-padding: 5px;
 }
 .callout-outlined .callout, .callout-outlined .markdown-source-view.mod-cm6 .callout {
-    background-color: transparent;
+    background-color: transparent !important;
     border: 1.5px var(--line-style) rgb(var(--callout-color));
     overflow: visible;
     margin: 1.5em 0px 1.5em;
