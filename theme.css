@@ -642,6 +642,7 @@ body, .theme-default {
   }
   .theme-crystal {
     --font-default: 'Moulpali', 'Bahnschrift', sans-serif;
+    --nav-item-color-active: var(--color-accent);
   }
   
   .theme-crystal.theme-light {
@@ -675,7 +676,7 @@ body, .theme-default {
     --color-base-10: #ccd9e1;
     --color-base-20: #2c323b;
     --color-base-25: #bac5d0;
-    --color-base-30: #455060;
+    --color-base-30: #5f728f41;
     --color-base-35: #e05f5f;
     --color-base-40: #9facbb;
     --color-base-50: #5877a2;
@@ -711,7 +712,7 @@ body, .theme-default {
     --color-base-00: #2d323a;
     --color-base-10: #483437;
     --color-base-20: #26272e;
-    --color-base-25: #6e5454;
+    --color-base-25: #262323;
     --color-base-30: #373d48;
     --color-base-35: #765454;
     --color-base-40: rgb(105, 122, 142);
@@ -839,7 +840,7 @@ body, .theme-default {
   text-indent: 40px;
 }
 
-  .theme-novelist.colorful-headings{
+  .theme-novelist.theme-light.colorful-headings{
     --h1-color: rgb(158, 119, 89);
     --h2-color: rgb(181, 138, 98);
     --h3-color: rgb(205, 155, 109);
@@ -847,7 +848,14 @@ body, .theme-default {
     --h5-color: rgb(210, 170, 51);
     --h6-color: rgb(222, 173, 26);
   }
-
+  .theme-novelist.theme-dark.colorful-headings{
+    --h1-color: rgb(228, 191, 163);
+    --h2-color: rgb(215, 179, 145);
+    --h3-color: rgb(207, 166, 129);
+    --h4-color: rgb(191, 157, 108);
+    --h5-color: rgb(203, 177, 99);
+    --h6-color: rgb(195, 165, 75);
+  }
   .theme-novelist .markdown-rendered hr::before, .theme-novelist .markdown-source-view hr::before{
     font-size: 1.5em;
     content: '🕮';
