@@ -30,9 +30,20 @@ The spectacular cards CSS class was originally created for the Minimal Theme by 
 
 <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy kepano a coffee&emoji=&slug=kepano&button_colour=6a8695&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
 
-This class will make items in dataview tables show up in a card-like grid. To use, type `cssClasses: cards` in the frontmatter.
+This class will make items in dataview tables show up in a card-like grid. To use, type `cssClasses: cards` in the frontmatter. This class requires the **dataview** plug-in.
 
 ![](cards.png)
+
+## 🔌 Compatible Plug-Ins
+### Dataview
+**Chime** includes styling for inline metadata and dataview tables. The `cards` class also utilizes this plug-in.
+
+### Pages Gallery
+Chime makes minor changes to the **Pages Gallery** plug-in and gives it an appearance similar to that of the cards css class. Text will now break and continue on a new line rather than overflowing, and tile heights will change according to the text. Images will be automatically set to *cover* and will override *contain* (this may change later, I just couldn't get the images to force certain ratios in contain mode). The font size within the tiles has been adjusted and a style setting has been added to get rid of the searchbar.
+
+### Cardboard
+An extremely minor change has been made to the text color.
+
 # ⭐ Credits
 A special thanks to...
 - kepano for their amazing Minimal theme
@@ -43,7 +54,7 @@ A special thanks to...
 - The developers of *Obsidian*.
   - I wouldn't have learned CSS without this app.
 # 📋 To-Do
-- [] update README
+- [x] update README
 - [x] Add header bottom border option
 - [ ] Add custom link and tag options
  
