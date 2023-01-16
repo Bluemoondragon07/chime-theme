@@ -508,7 +508,7 @@ body.colorful-headings.theme-crystal {
 .h6-bottom-border h6,
 .h6-bottom-border .HyperMD-header-6 {
 padding-bottom: 4px;
-border-bottom: 2px var(--line-style) var(--hr-color);
+border-bottom: 1.5px var(--line-style) var(--hr-color);
 }
 .h1-bottom-border.colorful-headings h1,
 .h1-bottom-border.colorful-headings .HyperMD-header-1,
