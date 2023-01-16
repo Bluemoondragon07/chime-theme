@@ -143,6 +143,13 @@ body.classic-layout {
 .classic-layout .workspace-ribbon::before {
     border-bottom: var(--border-width) var(--line-style) var(--background-modifier-border) !important;
 }
+/* --- make line style effect sidebar --- */
+.workspace-ribbon {
+    border-right: var(--divider-width) var(--line-style) var(--divider-color);    
+}
+body {
+    border-right-style: var(--line-style);
+}
 /* --- floating titlebar --- */
 .view-header-title {
     font-size: 14px;
@@ -344,15 +351,18 @@ body{
     border-top-right-radius: var(--radius-s);
     border-bottom-right-radius: var(--radius-s);
     z-index: 1;
+    font-style: italic;
 }
 .blockquote-block .markdown-rendered blockquote {
     border-radius: var(--radius-s);
     border-left: none;
+    font-style: normal;
 }
 .blockquote-quote .markdown-rendered blockquote {
     background-color: transparent;
     padding-top: 0px;
     padding-bottom: 0px;
+    font-style: normal;
 }
 .blockquote-minimal .markdown-rendered blockquote {
     background-color: transparent;
@@ -360,6 +370,7 @@ body{
     padding-bottom: 0px;
     border-color: var(--text-faint);
     color: var(--text-faint);
+    font-style: normal;
 }
 .blockquote-floating .markdown-rendered blockquote {
     background-color: transparent;
@@ -369,6 +380,7 @@ body{
 	box-shadow: var(--shadow-s);
     position: relative;
     z-index: 2;
+    font-style: normal;
 }
 
 
@@ -482,7 +494,52 @@ body.colorful-headings.theme-crystal {
 .h6-center h6 {
     text-align: center;
 }
-
+/* ----- bottom borders css classes for headers ----- */
+.h1-bottom-border h1,
+.h1-bottom-border .HyperMD-header-1,
+.h2-bottom-border h2,
+.h2-bottom-border .HyperMD-header-2,
+.h3-bottom-border h3,
+.h3-bottom-border .HyperMD-header-3,
+.h4-bottom-border h4,
+.h4-bottom-border .HyperMD-header-4,
+.h5-bottom-border h5,
+.h5-bottom-border .HyperMD-header-5,  
+.h6-bottom-border h6,
+.h6-bottom-border .HyperMD-header-6 {
+padding-bottom: 4px;
+border-bottom: 2px var(--line-style) var(--hr-color);
+}
+.h1-bottom-border.colorful-headings h1,
+.h1-bottom-border.colorful-headings .HyperMD-header-1,
+.h2-bottom-border.colorful-headings h2,
+.h2-bottom-border.colorful-headings .HyperMD-header-2,
+.h3-bottom-border.colorful-headings h3,
+.h3-bottom-border.colorful-headings .HyperMD-header-3,
+.h4-bottom-border.colorful-headings h4,
+.h4-bottom-border.colorful-headings .HyperMD-header-4,
+.h5-bottom-border.colorful-headings h5,
+.h5-bottom-border.colorful-headings .HyperMD-header-5,  
+.h6-bottom-border.colorful-headings h6,
+.h6-bottom-border.colorful-headings .HyperMD-header-6 {
+padding-bottom: 4px;
+border-bottom: 2px var(--line-style);
+}
+.h1-bottom-border.colorful-headings.theme-notion h1,
+.h1-bottom-border.colorful-headings.theme-notion .HyperMD-header-1,
+.h2-bottom-border.colorful-headings.theme-notion h2,
+.h2-bottom-border.colorful-headings.theme-notion .HyperMD-header-2,
+.h3-bottom-border.colorful-headings.theme-notion h3,
+.h3-bottom-border.colorful-headings.theme-notion .HyperMD-header-3,
+.h4-bottom-border.colorful-headings.theme-notion h4,
+.h4-bottom-border.colorful-headings.theme-notion .HyperMD-header-4,
+.h5-bottom-border.colorful-headings.theme-notion h5,
+.h5-bottom-border.colorful-headings.theme-notion .HyperMD-header-5,  
+.h6-bottom-border.colorful-headings.theme-notion h6,
+.h6-bottom-border.colorful-headings.theme-notion .HyperMD-header-6 {
+padding-bottom: 4px;
+border-bottom: 1.5px var(--line-style);
+}
 /* ----- callouts ----- */
 
 .callout, .callout-normal .callout {
@@ -592,12 +649,12 @@ body, .theme-default {
     --color-base-05: #faf3f1;
     --color-base-10: #f0e9e4;
     --color-base-20: #e1d6d6;
-    --color-base-25: #dad1d2;
-    --color-base-30: #cfc5c8;
-    --color-base-35: #c9bec2;
-    --color-base-40: #c6b4c2;
-    --color-base-50: #b3a3b3;
-    --color-base-60: #8e808e;
+    --color-base-25: #cdc1c2;
+    --color-base-30: #c1b5b8;
+    --color-base-35: #b5a7ac;
+    --color-base-40: #b6a4b2;
+    --color-base-50: #a391a3;
+    --color-base-60: #867786;
     --color-base-70: #685a68;
     --color-base-100: #594f67;
   }
@@ -2082,6 +2139,83 @@ border-radius: 0px;
     color: var(--text-normal);
     background-color: var(--background-secondary); }
 
+/* ---------- page gallery plug-in ---------- */
+.page-gallery__field {
+    text-shadow: none;
+    word-wrap: break-word;
+    white-space: initial;
+    overflow: hidden;
+    font-size: 90%;
+    margin: 6px;
+}
+.page-gallery__filter input {
+    width: 40%;
+    margin-bottom: 10px;
+    margin-left:11px;
+}
+.page-gallery__filter Label {
+    margin: 3px;
+    height: 1em;
+    width: 1em;
+}
+.hide-filter .page-gallery__filter{
+    display: none;
+}
+.page-gallery__filter-clear {
+    filter: grayscale();
+    text-decoration: none;
+    margin: 3px;
+    height: 1em;
+    width: 1em;
+}
+.page-gallery__image {
+    opacity: 100%;
+    border-radius: var(--radius-s) var(--radius-s) 0px 0px;
+    box-shadow: none;
+    width: 100%;
+    background-size: cover;
+}
+.page-gallery__image:hover {
+    opacity: 100%;
+    box-shadow: var(--shadow-s);
+}
+.page-gallery__fallback {
+box-shadow: none;
+border-radius: var(--radius-s) var(--radius-s) 0px 0px;
+background: linear-gradient(to bottom right,
+ var(--background-secondary),
+var(--background-primary-alt));
+}
+
+.theme-crystal.theme-light .page-gallery__fallback {
+    box-shadow: none;
+    border-radius: var(--radius-s) var(--radius-s) 0px 0px;
+    background: linear-gradient(to bottom right,
+     var(--background-secondary),
+      var(--text-muted));
+}
+.page-gallery__fallback:hover {
+    background: linear-gradient(to bottom right,
+        var(--background-secondary),
+        var(--background-modifier-border));
+        box-shadow: var(--shadow-s);
+}
+.theme-crystal.theme-light .page-gallery__fallback:hover {
+    background: linear-gradient(to bottom right,
+        var(--text-muted),
+        var(--color-base-70));
+}
+.page-gallery__tile {
+    max-width: 100%;
+    width: var(--image-width);
+    border: 1px var(--line-style) var(--background-modifier-border);
+    border-radius: var(--radius-s);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 /* @settings
 
 name: Chime Theme
@@ -2328,7 +2462,12 @@ settings:
         id: h1-center
         title: Center Header 1
         type: class-toggle
-        default: true
+        default: false
+    -
+        id: h1-bottom-border
+        title: Header 1 Bottom Border
+        type: class-toggle
+        default: false
     -
         id: h2-options
         title: Header 2
@@ -2355,7 +2494,12 @@ settings:
         id: h2-center
         title: Center Header 2
         type: class-toggle
-        default: true
+        default: false
+    -
+        id: h2-bottom-border
+        title: Header 2 Bottom Border
+        type: class-toggle
+        default: false
     -
         id: h3-options
         title: Header 3
@@ -2381,6 +2525,11 @@ settings:
     -
         id: h3-center
         title: Center Header 3
+        type: class-toggle
+        default: false
+    -
+        id: h3-bottom-border
+        title: Header 3 Bottom Border
         type: class-toggle
         default: false
     -
@@ -2411,6 +2560,11 @@ settings:
         type: class-toggle
         default: false
     -
+        id: h4-bottom-border
+        title: Header 4 Bottom Border
+        type: class-toggle
+        default: false
+    -
         id: h5-options
         title: Header 5
         type: heading
@@ -2435,6 +2589,11 @@ settings:
     -
         id: h5-center
         title: Center Header 5
+        type: class-toggle
+        default: false
+    -
+        id: h5-bottom-border
+        title: Header 5 Bottom Border
         type: class-toggle
         default: false
     -
@@ -2465,6 +2624,11 @@ settings:
         type: class-toggle
         default: false
     -
+        id: h6-bottom-border
+        title: Header 6 Bottom Border
+        type: class-toggle
+        default: false
+    -
         id: text-options
         title: Text
         type: heading
@@ -2476,4 +2640,20 @@ settings:
         type: class-toggle
         default: false
     -
+        id: plugin-options
+        title: Plugins
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: page-gallery
+        title: Page Gallery
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: hide-filter
+        title: Hide Search Bar
+        type: class-toggle
+        default: false
 */
