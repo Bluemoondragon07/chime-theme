@@ -43,7 +43,7 @@ A special thanks to...
 - The developers of *Obsidian*.
   - I wouldn't have learned CSS without this app.
 # 📋 To-Do
-- [ ] update README
-- [ ] Add header bottom border option
+- [] update README
+- [x] Add header bottom border option
 - [ ] Add custom link and tag options
  
