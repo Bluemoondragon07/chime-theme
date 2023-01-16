@@ -41,6 +41,8 @@ This class will make items in dataview tables show up in a card-like grid. To us
 ### Pages Gallery
 Chime makes minor changes to the **Pages Gallery** plug-in and gives it an appearance similar to that of the cards css class. Text will now break and continue on a new line rather than overflowing, and tile heights will change according to the text. Images will be automatically set to *cover* and will override *contain* (this may change later, I just couldn't get the images to force certain ratios in contain mode). The font size within the tiles has been adjusted and a style setting has been added to get rid of the searchbar.
 
+![](page-gallery.png)
+
 ### Cardboard
 An extremely minor change has been made to the text color.
 
