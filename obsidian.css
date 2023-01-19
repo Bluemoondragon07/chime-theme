@@ -69,10 +69,11 @@ body {
 
 /* -- round some things --- */
 body {
-    --radius-s: 8px;
-    --radius-m: 10px;
-    --radius-l: 12px;
-    --radius-xl: 14px;
+    --border-radius-average: 11px;
+    --radius-s: calc(var(--border-radius-average) - 3px);
+    --radius-m: calc(var(--border-radius-average) - 1px);
+    --radius-l: calc(var(--border-radius-average) + 1px);
+    --radius-xl: calc(var(--border-radius-average) + 3px);
 }
 
 body.classic-layout, .is-mobile {
@@ -90,6 +91,8 @@ body.classic-layout, .is-mobile {
 .workspace-leaf-content {
     border-radius: var(--radius-m);
     margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
     border: var(--border-width) var(--line-style) var(--background-modifier-border);
 }
 
@@ -180,25 +183,42 @@ body {
     --tab-text-color-focused-active-current: var(--color-accent-2);
     --tab-divider-color: var(--background-modifier-border);
     --tab-curve: 0px;
-    --tab-radius-active: 6px 6px 6px 6px;
-    --tab-font-size: 0.8em;
+    --tab-radius-active: var(--radius-s);
+    --tab-font-size: 0.84em;
     --tab-width: 240px;
     --tab-outline-width: var(--border-width);
     --tab-divider-color: transparent;
 }
-
+.classic-layout { 
+    --tab-radius-active: 6px 6px 0px 0px;
+    --tab-curve: 6px;
+}
+.classic-layout .workspace .mod-root .workspace-tab-header {
+    margin: 0px;
+    height: inherit;
+    border-bottom: none;
+}
 .workspace .mod-root .workspace-tab-header {
-    padding: 0;
-    margin-bottom: 0.5em;
+    padding: 5px;
+    margin: 0.1em;
+    height: auto;
+}
 
+
+.workspace .mod-root .workspace-tab-header-inner-title {
+    text-overflow: ellipsis;
+    width: 100%;
 }
 .workspace-tab-header-container {
     background-color: transparent;
     border-bottom: none;
+    margin-bottom: 0.5em;
 }
+
 
 .classic-layout .workspace-tab-header-container, .is-mobile .workspace-tab-header-container {
     border-bottom: var(--border-width) var(--line-style) var(--background-modifier-border);
+    margin-bottom: 0px;
 }
 
 /* --- dividers --- */
@@ -437,6 +457,8 @@ body{
     --h4-weight: 600;
     --h5-weight: 600;
     --h6-weight: 600;
+}
+body:not(.colorful-headings), body {
     --h1-color: var(--text-normal);
     --h2-color: var(--text-normal);
     --h3-color: var(--text-normal);
@@ -456,7 +478,7 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
     --h6-size: 1em;
 }
 /* ----- colorful headings class */
-body.colorful-headings {
+.colorful-headings {
     --h1-color: var(--color-accent-2);
     --h2-color: hsl(calc(var(--accent-h) + 20), calc(var(--accent-s) - 5%), calc(var(--accent-l) - 2%));
     --h3-color: hsl(calc(var(--accent-h) + 35), calc(var(--accent-s) - 10%), calc(var(--accent-l) - 4%));
@@ -464,7 +486,7 @@ body.colorful-headings {
     --h5-color: hsl(calc(var(--accent-h) + 65), calc(var(--accent-s) - 25%), calc(var(--accent-l) - 10%));
     --h6-color: hsl(calc(var(--accent-h) + 80), calc(var(--accent-s) - 30%), calc(var(--accent-l) - 10%));
 }
-body.colorful-headings.theme-crystal {
+.colorful-headings.theme-crystal {
     --h1-color: rgb(85, 108, 147);
     --h2-color: rgb(115, 106, 174);
     --h3-color: rgb(146, 104, 162);
@@ -507,7 +529,7 @@ body.colorful-headings.theme-crystal {
 .h5-bottom-border .HyperMD-header-5,  
 .h6-bottom-border h6,
 .h6-bottom-border .HyperMD-header-6 {
-padding-bottom: 4px;
+padding-bottom: 1px;
 border-bottom: 1.5px var(--line-style) var(--hr-color);
 }
 .h1-bottom-border.colorful-headings h1,
@@ -536,8 +558,19 @@ border-bottom: 1.7px var(--line-style);
 .h5-bottom-border.colorful-headings.theme-notion h5,
 .h5-bottom-border.colorful-headings.theme-notion .HyperMD-header-5,  
 .h6-bottom-border.colorful-headings.theme-notion h6,
-.h6-bottom-border.colorful-headings.theme-notion .HyperMD-header-6 {
-padding-bottom: 0px;
+.h6-bottom-border.colorful-headings.theme-notion .HyperMD-header-6,
+.h1-bottom-border.colorful-headings.theme-anytype h1,
+.h1-bottom-border.colorful-headings.theme-anytype .HyperMD-header-1,
+.h2-bottom-border.colorful-headings.theme-anytype h2,
+.h2-bottom-border.colorful-headings.theme-anytype .HyperMD-header-2,
+.h3-bottom-border.colorful-headings.theme-anytype h3,
+.h3-bottom-border.colorful-headings.theme-anytype .HyperMD-header-3,
+.h4-bottom-border.colorful-headings.theme-anytype h4,
+.h4-bottom-border.colorful-headings.theme-anytype .HyperMD-header-4,
+.h5-bottom-border.colorful-headings.theme-anytype h5,
+.h5-bottom-border.colorful-headings.theme-anytype .HyperMD-header-5,  
+.h6-bottom-border.colorful-headings.theme-anytype h6,
+.h6-bottom-border.colorful-headings.theme-anytype .HyperMD-header-6 {
 border-bottom: none;
 }
 /* ----- callouts ----- */
@@ -797,7 +830,7 @@ body, .theme-default {
     --bold-color: rgb(135, 204, 135);
   }
 
-  .theme-spring.colorful-headings {
+  .colorful-headings.theme-spring {
     --h1-color: rgb(140, 190, 97);
     --h2-color: rgb(126, 216, 188);
     --h4-color: rgb(227, 185, 114);
@@ -1009,7 +1042,7 @@ body, .theme-default {
     --color-base-50: #abb4c4;
     --color-base-60: #99a3b6;
     --color-base-70: #848fa4;
-    --color-base-100: #6b778e;
+    --color-base-100: #4a5364;
   }
   .theme-nord.theme-dark {
     color-scheme: dark;
@@ -1161,7 +1194,7 @@ body, .theme-default {
     --color-base-50: hsl(calc(0 + var(--accent-h)), 18%, 63%);
     --color-base-60: hsl(calc(0 + var(--accent-h)), 55%, 72%);
     --color-base-70: hsl(calc(0 + var(--accent-h)), 30%, 60%);
-    --color-base-100: hsl(calc(0 + var(--accent-h)), 10%, 30%);
+    --color-base-100: hsl(calc(0 + var(--accent-h)), 5%, 30%);
   }
   .theme-light-and-bright.theme-dark {
     color-scheme: dark;
@@ -1194,7 +1227,7 @@ body, .theme-default {
     --color-base-50: hsl(calc(0 + var(--accent-h)), 18%, 55%);
     --color-base-60: hsl(calc(0 + var(--accent-h)), 20%, 60%);
     --color-base-70: hsl(calc(0 + var(--accent-h)), 22%, 64%);
-    --color-base-100: hsl(calc(0 + var(--accent-h)), 15%, 68%);
+    --color-base-100: hsl(calc(0 + var(--accent-h)), 15%, 78%);
   }
 
   /* --- dividers --- */
@@ -1368,8 +1401,8 @@ body, .theme-default {
 /* ----- anytype theme ----- */
 
 .theme-anytype.colored-bold-and-italic {
-    --bold-color: orange;
-    --italic-color: rgb(81, 192, 236);
+    --bold-color: var(--color-blue);
+    --italic-color: var(--color-green);
 }
 
 .theme-anytype.colorful-headings {
@@ -1432,9 +1465,6 @@ body, .theme-default {
     --color-pink:  #9859C8;
   }
   /* --- hide header title and sidebar actions --- */
-  .theme-anytype .view-header-title-container {
-    opacity: 0;
-  }
   .theme-anytype .workspace-ribbon.mod-left.is-collapsed .side-dock-actions {
     display: none;
   }
@@ -1490,7 +1520,7 @@ body, .theme-default {
     --color-base-50: #7b7974;
     --color-base-60: #9c9994;
     --color-base-70: #aeaba6;
-    --color-base-100: #c6c2bc;
+    --color-base-100: #ffffff;
 }
 
 /* ----- celestial theme ----- */
@@ -1698,7 +1728,7 @@ body, .theme-default {
     background-color: rgba(var(--color-purple-rgb), 0.26);
     padding: 5px 10px 5px 10px;
 }
-/* - colors - */
+/* - colors and font - */
 .theme-notion {
     --accent-h: 210 !important;
     --accent-s: 77% !important;
@@ -2183,8 +2213,116 @@ var(--background-primary-alt));
     flex-direction: column;
 }
 
+/* ------ focus mode ------ */
+.nav-buttons-container, .view-actions, .workspace-tab-header-inner, .side-dock-settings, .side-dock-actions {
+    opacity: 1;
+}
+/* --- hide buttons --- */
+.hide-buttons.classic-layout {
+    --border-width: 0px;
+}
+.hide-buttons .view-actions, .hide-buttons .side-dock-settings, .hide-buttons .side-dock-actions, .hide-buttons .sidebar-toggle-button {
+    opacity: 0;
+}
+.hide-buttons .view-actions:hover, .hide-buttons .side-dock-settings:hover, .hide-buttons .side-dock-actions:hover, .sidebar-toggle-button:hover {
+    opacity: 1;
+    transition: opacity .15s ease-in-out;
+    transition-delay: 0ms;
+}
+/* --- hide titlebar --- */
+.hide-titlebar .view-header {
+    display: none;
+}
 
 
+/* --- hide tabs --- */
+.hide-tabs .workspace-tab-header-container {
+    opacity: 0;
+}
+
+.hide-tabs .workspace-tab-header-container:hover {
+    opacity: 1;
+    transition: opacity .23s ease-in-out;
+    transition-delay: 0ms;
+}
+
+/* ---------- ultra focus --------- */
+
+/* --- center workspace leaf --- */
+.ultra-focus .workspace-leaf-content {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.ultra-focus.classic-layout {
+    --workspace-background: var(--background-primary);
+    --divider-width: 0px;
+}
+.ultra-focus.classic-layout .workspace-ribbon::before {
+    background-color: var(--background-secondary) !important;
+    border-bottom: 2px solid var(--background-secondary) !important;
+}
+/* --- make sidebar disappear until hover --- */
+.ultra-focus .workspace-ribbon.mod-left.is-collapsed {
+    display:block;
+    max-width: 5px;
+    opacity: 0;
+}
+.ultra-focus .workspace-ribbon.mod-left.is-collapsed:hover {
+    display:flex;
+    max-width: inherit;
+    opacity: 1;
+    transition: opacity .2s ease-in-out, width .3s ease-in-out, display .1s ease-in;
+    transition-delay: 0ms;
+}
+/* --- hide tabs until hover --- */
+.ultra-focus .workspace-tab-header-container:not(:hover) {
+    display: block;
+    height: 5px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out, height .1s ease-in-out, display .1s ease-in;
+    transition-delay: 0ms;
+}
+.ultra-focus .workspace-tab-header-container:hover {
+    display: flex;
+    height: var(--header-height);
+    opacity: 1;
+    transition: opacity .2s ease-in-out, height .1s ease-in-out, display .1s ease-in;
+    transition-delay: 0ms;
+}
+
+/* ----- increased line height ---- */
+body {
+    --line-height-normal: 1.7;
+    --line-height-tight: 1.3;
+}
+.increased-line-height {
+    --line-height-normal: 2.15;
+    --line-height-tight: 1.6
+}
+.markdown-source-view.mod-cm6 .cm-line {
+    --line-height: var(--line-height-normal) !important;
+}
+.increased-line-height .markdown-rendered h1, .increased-line-height .HyperMD-header-1,
+.increased-line-height .markdown-rendered h2, .increased-line-height .HyperMD-header-2,
+.increased-line-height .markdown-rendered h3, .increased-line-height  .HyperMD-header-3,
+.increased-line-height .markdown-rendered h4, .increased-line-height .HyperMD-header-4,
+.increased-line-height .markdown-rendered h5, .increased-line-height .HyperMD-header-5,
+.increased-line-height .markdown-rendered h6, .increased-line-height.HyperMD-header-6 {
+    margin-top: 1.6em;
+}
+ .markdown-rendered h1,  .HyperMD-header-1,
+ .markdown-rendered h2,  .HyperMD-header-2,
+ .markdown-rendered h3,  .HyperMD-header-3,
+.markdown-rendered h4,  .HyperMD-header-4,
+ .markdown-rendered h5,  .HyperMD-header-5,
+ .markdown-rendered h6, .HyperMD-header-6 {
+    margin-top: 1.2em;
+}
+ .increased-line-height .markdown-preview-view br, .increased-line-height .markdown-preview-view br {
+    content: '';
+    display: block;
+    margin-top: 0.5em !important;
+}
 /* @settings
 
 name: Chime Theme
@@ -2244,10 +2382,19 @@ settings:
         id: border-width
         title: Border Width
         type: variable-number-slider
-        default: 1
+        default: 1.2
         min: 1
-        max: 5
-        step: 0.5
+        max: 2.5
+        step: 0.1
+        format: px
+    -
+        id: border-radius-average
+        title: Border Radius (Roundness)
+        type: variable-number-slider
+        default: 11
+        min: 0
+        max: 30
+        step: 1
         format: px
     -
         id: hide-dividers
@@ -2609,6 +2756,12 @@ settings:
         type: class-toggle
         default: false
     -
+        id: increased-line-height
+        title: Increased Line Height
+        description: Increase line height and paragraph spacing for more readability.
+        type: class-toggle
+        default: false
+    -
         id: plugin-options
         title: Plugins
         type: heading
@@ -2625,4 +2778,34 @@ settings:
         title: Hide Search Bar
         type: class-toggle
         default: false
+    -
+        id: focus-mode-heading
+        title: Focus Mode
+        type: heading
+        description: Hide certain UI elements until you hover over them with your mouse.
+        level: 2
+        collapsed: true
+    -
+        id: hide-buttons
+        title: Hide Buttons
+        type: class-toggle
+        default: false
+    -
+        id: hide-tabs
+        title: Hide Tabs
+        type: class-toggle
+        default: false
+    -
+        id: hide-titlebar
+        title: Hide Floating Note Titlebar
+        type: class-toggle
+        default: false
+    -
+        id: ultra-focus
+        title: Enable Ultra Focus (A.K.A. Full-Screen)
+        description: Everything except your note is completely invisible until you hover over it. Your note takes up most of the screen.
+        type: class-toggle
+        default: false
+
+
 */
