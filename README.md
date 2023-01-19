@@ -6,7 +6,8 @@ A lightweight theme for Obsidian designed to be simple yet highly customizable.
 ## ✒️ Customizability (with Style Settings plug-in)
 - 12 different color schemes
 - Choose between the Card and Classic layout styles.
-- Options for blockquotes, headings, checkboxes, and more.  
+- Hide certain components or even enable full-screen mode for maximum focus.
+- Options for styling blockquotes, headings, checkboxes, and more.  
 ## ✅ Simplicity
 Chime was designed with a special intention to not overwhelm you with options. Customizability is given for only the most important components.
 ## 🚩 CSS Classes
