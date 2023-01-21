@@ -372,6 +372,7 @@ body{
     border-bottom-right-radius: var(--radius-s);
     z-index: 2;
     font-style: italic;
+    position: relative;
 }
 .blockquote-block .markdown-rendered blockquote {
     border-radius: var(--radius-s);
@@ -586,6 +587,7 @@ border-bottom: none;
 .callout, .callout-normal .callout {
     background-color: rgba(var(--callout-color), 0.17);
     border: none;
+    position: relative;
     z-index: 2;
 }
 .callout-bordered .callout {
@@ -1471,7 +1473,8 @@ body, .theme-default {
 }
 .theme-anytype.callout-outlined .callout {
     background-color: transparent !important;
-    border-width: 3px;
+    border-width: 2px;
+    border-color: rgba(var(--callout-color), 0.75);
 }
 .theme-anytype.callout-bordered .callout {
     background-color: rgba(var(--callout-color), 0.3);
@@ -1481,6 +1484,9 @@ body, .theme-default {
     background-color: rgba(var(--callout-color), 0.3);
 }
 .theme-anytype .callout-icon .svg-icon {
+    color: var(--text-normal);
+}
+.theme-anytype .callout-fold .svg-icon {
     color: var(--text-normal);
 }
 
