@@ -370,13 +370,14 @@ body{
     padding-bottom: 10px;
     border-top-right-radius: var(--radius-s);
     border-bottom-right-radius: var(--radius-s);
-    z-index: 1;
+    z-index: 2;
     font-style: italic;
 }
 .blockquote-block .markdown-rendered blockquote {
     border-radius: var(--radius-s);
     border-left: none;
     font-style: normal;
+    
 }
 .blockquote-quote .markdown-rendered blockquote {
     background-color: transparent;
@@ -399,7 +400,6 @@ body{
     border: 1.2px var(--line-style) var(--background-modifier-border);
 	box-shadow: var(--shadow-s);
     position: relative;
-    z-index: 2;
     font-style: normal;
 }
 
@@ -479,20 +479,28 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
 }
 /* ----- colorful headings class */
 .colorful-headings {
-    --h1-color: var(--color-accent-2);
+    --h1-color: var(--color-accent);
     --h2-color: hsl(calc(var(--accent-h) + 20), calc(var(--accent-s) - 5%), calc(var(--accent-l) - 2%));
     --h3-color: hsl(calc(var(--accent-h) + 35), calc(var(--accent-s) - 10%), calc(var(--accent-l) - 4%));
     --h4-color: hsl(calc(var(--accent-h) + 50), calc(var(--accent-s) - 20%), calc(var(--accent-l) - 6%));
     --h5-color: hsl(calc(var(--accent-h) + 65), calc(var(--accent-s) - 25%), calc(var(--accent-l) - 10%));
     --h6-color: hsl(calc(var(--accent-h) + 80), calc(var(--accent-s) - 30%), calc(var(--accent-l) - 10%));
 }
-.colorful-headings.theme-crystal {
-    --h1-color: rgb(85, 108, 147);
-    --h2-color: rgb(115, 106, 174);
-    --h3-color: rgb(146, 104, 162);
-    --h4-color: rgb(171, 94, 129);
-    --h5-color: rgb(173, 83, 96);
-    --h6-color: rgb(184, 67, 67); 
+.colorful-headings.theme-dark.theme-crystal {
+    --h6-color: rgb(91, 117, 161);
+    --h5-color: rgb(140, 132, 190);
+    --h4-color: rgb(154, 118, 168);
+    --h3-color: rgb(191, 118, 151);
+    --h2-color: rgb(203, 120, 132);
+    --h1-color: rgb(208, 92, 92); 
+}
+.colorful-headings.theme-light.theme-crystal {
+    --h1-color: rgb(91, 117, 161);
+    --h2-color: rgb(140, 132, 190);
+    --h3-color: rgb(154, 118, 168);
+    --h4-color: rgb(191, 118, 151);
+    --h5-color: rgb(203, 120, 132);
+    --h6-color: rgb(208, 92, 92); 
 }
 /* ----- center headers classes ----- */
 .h1-center h1 {
@@ -530,7 +538,7 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
 .h6-bottom-border h6,
 .h6-bottom-border .HyperMD-header-6 {
 padding-bottom: 1px;
-border-bottom: 1.5px var(--line-style) var(--hr-color);
+border-bottom: 1.4px var(--line-style) var(--hr-color);
 }
 .h1-bottom-border.colorful-headings h1,
 .h1-bottom-border.colorful-headings .HyperMD-header-1,
@@ -545,7 +553,7 @@ border-bottom: 1.5px var(--line-style) var(--hr-color);
 .h6-bottom-border.colorful-headings h6,
 .h6-bottom-border.colorful-headings .HyperMD-header-6 {
 padding-bottom: 4px;
-border-bottom: 1.7px var(--line-style);
+border-bottom: 1.4px var(--line-style);
 }
 .h1-bottom-border.colorful-headings.theme-notion h1,
 .h1-bottom-border.colorful-headings.theme-notion .HyperMD-header-1,
@@ -578,6 +586,7 @@ border-bottom: none;
 .callout, .callout-normal .callout {
     background-color: rgba(var(--callout-color), 0.17);
     border: none;
+    z-index: 2;
 }
 .callout-bordered .callout {
     border: 1.2px var(--line-style) rgb(var(--callout-color));
@@ -594,7 +603,6 @@ border-bottom: none;
 .callout-outlined .callout-title {
     background-color: var(--background-primary);
     margin-top: -22.5px;
-    z-index: 200;
     margin-left: -0.75em;
     padding: 0 0.5em;
     width: fit-content;
@@ -605,7 +613,6 @@ border-bottom: none;
     border: 1.2px var(--line-style) rgb(var(--callout-color));
 	box-shadow: var(--shadow-s);
     position: relative;
-    z-index: 2;
 }
 /* custom callout colors */
 .callout[data-callout="danger"], 
@@ -817,7 +824,7 @@ body, .theme-default {
     --color-base-50: rgb(142, 81, 81);
     --color-base-60: rgb(202, 112, 112);
     --color-base-70: #65707d;
-    --color-base-100: #a18d8d;
+    --color-base-100: #b5a4a4;
   }
 
   /* ----- spring theme ----- */
@@ -883,13 +890,13 @@ body, .theme-default {
     --color-purple: #b584c7;
     --color-pink-rgb: 255, 148, 200;
     --color-pink: #ff94c8;
-    --color-base-00: #465b58;
-    --color-base-10: #455957;
-    --color-base-20: #3d4e4d;
-    --color-base-25: #637d74;
-    --color-base-30: #537166;
-    --color-base-35: #698678;
-    --color-base-40: rgb(115, 150, 126);
+    --color-base-00: #414e44;
+    --color-base-10: #45594b;
+    --color-base-20: #37463d;
+    --color-base-25: #556951;
+    --color-base-30: #4e624b;
+    --color-base-35: #6b8669;
+    --color-base-40: rgb(119, 161, 116);
     --color-base-50: rgb(143, 163, 141);
     --color-base-60: rgb(137, 161, 118);
     --color-base-70: #a0ae8e;
@@ -938,20 +945,6 @@ body, .theme-default {
     --h5-color: rgb(203, 177, 99);
     --h6-color: rgb(195, 165, 75);
   }
-  .theme-novelist .markdown-rendered hr::before, .theme-novelist .markdown-source-view hr::before{
-    font-size: 1.5em;
-    content: '🕮';
-    font-weight: 500;
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: 50% 50%;
-    padding: 0.35rem;
-    color: var(--background-modifier-border-hover);
-    background-color: var(--background-primary);
-    z-index: 1;
-}
   
   .theme-novelist.theme-light {
     color-scheme: light;
@@ -991,12 +984,18 @@ body, .theme-default {
 
   /* ----- nord theme ----- */
    .theme-nord.colorful-headings {
-    --h1-color: #5E81AC;
+   /* --h1-color: #5E81AC;
     --h2-color: #7da0c3;
     --h3-color: #85b4cf;
     --h4-color: #80b5c3;
     --h5-color: #81b8c2;
-    --h6-color: #8FBCBB;
+    --h6-color: #8FBCBB;*/
+    --h1-color: var(--color-red);
+    --h2-color: var(--color-orange);
+    --h3-color: var(--color-yellow);
+    --h4-color: var(--color-green);
+    --h5-color: var(--color-cyan);
+    --h6-color: var(--color-blue);
 } 
 .theme-nord.colored-bold-and-italic {
     --bold-color: var(--color-blue);
@@ -1065,9 +1064,11 @@ body, .theme-default {
     --color-purple: #5e81AC;
     --color-pink-rgb: 180, 142, 173;
     --color-pink: #b48ead;
-    --color-base-00: #2E3440;
+    /* --color-base-00: #2E3440; */
+    --color-base-00:  #3B4252;
     --color-base-10: #383f4c;
-    --color-base-20: #3B4252;
+    /* --color-base-20: #3B4252; */
+    --color-base-20:  #2E3440;
     --color-base-25: #474e5f;
     --color-base-30: #434C5E;
     --color-base-35: #50596b;
@@ -1446,7 +1447,6 @@ body, .theme-default {
     --callout-quote: 216, 216, 216;
     --callout-radius: 5px;
     --font-default: 'Inter', 'Aevnir Next', sans-serif;
-    --border-width: 0px !important;
     --color-red-rgb: 220, 83, 40;
     --color-red: #DC5328;
     --color-green-rgb: 139, 208, 49;
@@ -1463,10 +1463,6 @@ body, .theme-default {
     --color-purple: #3C64E7;
     --color-pink-rgb: 152, 89, 200;
     --color-pink:  #9859C8;
-  }
-  /* --- hide header title and sidebar actions --- */
-  .theme-anytype .workspace-ribbon.mod-left.is-collapsed .side-dock-actions {
-    display: none;
   }
 
 /* --- callouts --- */
@@ -1496,9 +1492,9 @@ body, .theme-default {
     --color-base-00: #ffffff;
     --color-base-05: #f8f8f8;
     --color-base-10: #f1f1f1;
-    --color-base-20: #fdfdfd;
+    --color-base-20: #fafafa;
     --color-base-25:  #f2f2f2;
-    --color-base-30: #e3e3e3;
+    --color-base-30: rgb(230, 230, 230);
     --color-base-35: #d4d4d4;
     --color-base-40: #bdbdbd;
     --color-base-50: #a2a0a0;
@@ -1512,7 +1508,7 @@ body, .theme-default {
     --highlight-mix-blend-mode: lighten;
     --color-base-00: #21201e;
     --color-base-10: #32312f;
-    --color-base-20: #21201e;
+    --color-base-20: rgb(28, 26, 23);
     --color-base-25: #21201e;
     --color-base-30: #21201e;
     --color-base-35: #484643;
@@ -1527,12 +1523,18 @@ body, .theme-default {
 
 /* --- vault title --- */
 .theme-celestial.theme-light.colorful-headings {
-    --h1-color: #ffaa00;
+    /* --h1-color: #ffaa00;
     --h2-color: #ffb700;
     --h3-color: #ffc400;
     --h4-color: #f2c73b;
     --h5-color: #e5bf42;
-    --h6-color: #d6b548;
+    --h6-color: #d6b548; */
+    --h1-color: var(--color-red);
+    --h2-color: var(--color-orange);
+    --h3-color: var(--color-yellow);
+    --h4-color: var(--color-green);
+    --h5-color: var(--color-cyan);
+    --h6-color: var(--color-blue);
 }
 .theme-celestial.theme-dark.colorful-headings {
     --h6-color: #898fe1;
@@ -1579,7 +1581,7 @@ body, .theme-default {
     --accent-s: 100% !important;
     --accent-l: 50% !important;
     --color-red-rgb: 255, 114, 114;
-    --color-red: #ff7272;
+    --color-red: rgb(255, 145, 114);
     --color-green-rgb: 170, 199, 83;
     --color-green: #aac753;
     --color-orange-rgb: 247, 153, 70;
@@ -2181,29 +2183,16 @@ color: rgb(var(--rainbow-folder-color));
 .page-gallery__fallback {
 box-shadow: none;
 border-radius: var(--radius-s) var(--radius-s) 0px 0px;
-background: linear-gradient(to bottom right,
- var(--background-secondary),
-var(--background-primary-alt));
+background: var(--background-secondary-alt);
 }
 
-.theme-crystal.theme-light .page-gallery__fallback {
-    box-shadow: none;
-    border-radius: var(--radius-s) var(--radius-s) 0px 0px;
-    background: linear-gradient(to bottom right,
-     var(--background-secondary),
-      var(--text-muted));
-}
 .page-gallery__fallback:hover {
     background: linear-gradient(to bottom right,
         var(--background-secondary),
         var(--background-modifier-border));
         box-shadow: var(--shadow-s);
 }
-.theme-crystal.theme-light .page-gallery__fallback:hover {
-    background: linear-gradient(to bottom right,
-        var(--text-muted),
-        var(--color-base-70));
-}
+
 .page-gallery__tile {
     max-width: 100%;
     width: var(--image-width);
@@ -2211,7 +2200,12 @@ var(--background-primary-alt));
     border-radius: var(--radius-s);
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow-s);
 }
+.theme-dark .page-gallery__tile {
+    background-color: var(--background-secondary);  
+}
+
 
 /* ------ focus mode ------ */
 .nav-buttons-container, .view-actions, .workspace-tab-header-inner, .side-dock-settings, .side-dock-actions {
@@ -2308,7 +2302,7 @@ body {
 .increased-line-height .markdown-rendered h4, .increased-line-height .HyperMD-header-4,
 .increased-line-height .markdown-rendered h5, .increased-line-height .HyperMD-header-5,
 .increased-line-height .markdown-rendered h6, .increased-line-height.HyperMD-header-6 {
-    margin-top: 1.6em;
+    margin-top: 2.2em;
 }
  .markdown-rendered h1,  .HyperMD-header-1,
  .markdown-rendered h2,  .HyperMD-header-2,
@@ -2316,7 +2310,7 @@ body {
 .markdown-rendered h4,  .HyperMD-header-4,
  .markdown-rendered h5,  .HyperMD-header-5,
  .markdown-rendered h6, .HyperMD-header-6 {
-    margin-top: 1.2em;
+    margin-top: 2em;
 }
  .increased-line-height .markdown-preview-view br, .increased-line-height .markdown-preview-view br {
     content: '';
