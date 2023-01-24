@@ -340,6 +340,13 @@ thead {
 .wide {
     --file-line-width: 100%;
 }
+.wide img {
+    position: relative;
+    aspect-ratio: 16/6;
+    object-fit:cover;
+    width: 100%;
+    object-position: left;
+}
 /* --- bold and italic colors --- */
 
 
@@ -921,7 +928,7 @@ body, .theme-default {
     align-content: left;
   }
   
-  .theme-novelist .markdown-preview-view br, .novel.markdown-preview-view br {
+.theme-novelist .markdown-preview-view br, .novel.markdown-preview-view br {
     content: '';
     display: block;
     margin-top: 10px;
@@ -929,6 +936,22 @@ body, .theme-default {
 .novel.cm-s-obsidian, .novel .markdown-preview-section p
 {
   text-indent: 40px;
+}
+/* --- dividers --- */
+.theme-novelist:not(.is-mobile) .markdown-rendered hr::before, .theme-novelist .markdown-source-view hr::before{
+    font-size: 1.5em;
+    content: '🕮';
+    font-weight: 500;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+    padding: 0.35rem;
+    color: var(--background-modifier-border-hover);
+    background-color: var(--background-primary);
+    z-index: 1;
+    
 }
 
   .theme-novelist.theme-light.colorful-headings{
@@ -955,7 +978,7 @@ body, .theme-default {
     --mono-rgb-100: 0, 0, 0;
     --color-base-00: #faf8f0;
     --color-base-05: #f2eadb;
-    --color-base-10: #dfd5c0;
+    --color-base-10: #f4f0e9;
     --color-base-20: #f4eee3;
     --color-base-25: #ccb8a0;
     --color-base-30: #e1d5c9;
@@ -2249,6 +2272,9 @@ background: var(--background-secondary-alt);
 /* ---------- ultra focus --------- */
 
 /* --- center workspace leaf --- */
+.ultra-focus {
+    --file-line-width: 68%;
+}
 .ultra-focus .workspace-leaf-content {
     margin-left: 0px;
     margin-right: 0px;
@@ -2390,6 +2416,7 @@ settings:
     -
         id: border-radius-average
         title: Border Radius (Roundness)
+	description: Adjust the roundness of the panes and other small elements (overriden with classic mode turned on)
         type: variable-number-slider
         default: 11
         min: 0
