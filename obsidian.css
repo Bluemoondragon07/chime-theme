@@ -2240,6 +2240,7 @@ background: var(--background-secondary-alt);
 .nav-buttons-container, .view-actions, .workspace-tab-header-inner, .side-dock-settings, .side-dock-actions {
     opacity: 1;
 }
+
 /* --- hide buttons --- */
 .hide-buttons.classic-layout {
     --border-width: 0px;
