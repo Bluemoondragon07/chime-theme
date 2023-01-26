@@ -108,6 +108,7 @@ body.classic-layout, .is-mobile {
     background-color: var(--background-primary);
 }
 
+
 /* --- sidebars --- */
 body, body.theme-crystal.classic-layout {
     --ribbon-background-collapsed: transparent;
@@ -204,7 +205,6 @@ body {
     height: auto;
 }
 
-
 .workspace .mod-root .workspace-tab-header-inner-title {
     text-overflow: ellipsis;
     width: 100%;
@@ -220,6 +220,7 @@ body {
     border-bottom: var(--border-width) var(--line-style) var(--background-modifier-border);
     margin-bottom: 0px;
 }
+
 
 /* --- dividers --- */
 
@@ -364,8 +365,13 @@ thead {
     --italic-color: var(--color-green);
 }
 
-
-
+/* --- toggle buttons in settings --- */
+.checkbox-container.is-enabled {
+    background-color: var(--color-green);
+}
+.checkbox-container:not(.is-enabled) {
+    background-color: var(--color-red);
+}
 /* --- blockquotes --- */
 body{
     --blockquote-border-thickness: 2.5px;
@@ -414,12 +420,30 @@ body{
 
 /* --- highlights --- */
 
-.markdown-rendered mark {
+.markdown-rendered mark, .cm-s-obsidian span.cm-highlight {
     border-radius: 5px;
     padding-left: 5px;
     padding-right: 5px;
     border-bottom: 2px var(--color-accent-2) var(--line-style);
 }
+.theme-dark.theme-default .markdown-rendered mark, .theme-dark.theme-default .cm-s-obsidian span.cm highlight,
+.theme-dark.theme-celestial .markdown-rendered mark, .theme-dark.theme-celestial .cm-s-obsidian span.cm highlight,
+.theme-dark.theme-spring .markdown-rendered mark, .theme-dark.theme-spring .cm-s-obsidian span.cm highlight {
+ color: white;
+}
+
+.underlined-highlight .markdown-rendered mark, .underlined-highlight .cm-s-obsidian span.cm-highlight {
+    background-color: transparent;
+    border-radius: 0px;
+    padding: 0px;
+    border-bottom: 3px var(--color-accent-2) var(--line-style);
+    font-weight: bold;
+}
+.theme-dark.underlined-highlight .markdown-rendered mark, .theme-dark.underlined-highlight .cm-s-obsidian span.cm-highlight {
+    color: var(--color-accent-2);
+}
+
+
 
 /* ----- active button ----- */
 .theme-default .horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
@@ -510,26 +534,34 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
     --h5-color: rgb(203, 120, 132);
     --h6-color: rgb(208, 92, 92); 
 }
+.colorful-headings.theme-default {
+    --h1-color: var(--color-red);
+    --h2-color: var(--color-orange);
+    --h3-color: var(--color-yellow);
+    --h4-color: var(--color-green);
+    --h5-color: var(--color-cyan);
+    --h6-color: var(--color-blue);
+}
 /* ----- center headers classes ----- */
-.h1-center h1 {
+.h1-center h1, .h1-center .HyperMD-header-1 {
     text-align: center;
 }
 .h1-center .inline-title {
   text-align: center;
 }
-.h2-center h2 {
+.h2-center h2, .h2-center .HyperMD-header-2 {
     text-align: center;
 }
-.h3-center h3 {
+.h3-center h3, .h3-center .HyperMD-header-3 {
     text-align: center;
 }
-.h4-center h4 {
+.h4-center h4, .h4-center .HyperMD-header-4 {
     text-align: center;
 }
-.h5-center h5 {
+.h5-center h5, .h5-center .HyperMD-header-5 {
     text-align: center;
 }
-.h6-center h6 {
+.h6-center h6, .h6-center .HyperMD-header-6 {
     text-align: center;
 }
 /* ----- bottom borders css classes for headers ----- */
@@ -545,7 +577,7 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
 .h5-bottom-border .HyperMD-header-5,  
 .h6-bottom-border h6,
 .h6-bottom-border .HyperMD-header-6 {
-padding-bottom: 1px;
+padding-bottom: 2px;
 border-bottom: 1.4px var(--line-style) var(--hr-color);
 }
 .h1-bottom-border.colorful-headings h1,
@@ -560,7 +592,7 @@ border-bottom: 1.4px var(--line-style) var(--hr-color);
 .h5-bottom-border.colorful-headings .HyperMD-header-5,  
 .h6-bottom-border.colorful-headings h6,
 .h6-bottom-border.colorful-headings .HyperMD-header-6 {
-padding-bottom: 4px;
+padding-bottom: 2px;
 border-bottom: 1.4px var(--line-style);
 }
 .h1-bottom-border.colorful-headings.theme-notion h1,
@@ -680,6 +712,7 @@ body {
 body, .theme-default {
     --font-default: 'Overlock', cursive;
 }
+
 .theme-light, .theme-default.theme-light {
     color-scheme: light;
     --highlight-mix-blend-mode: darken;
@@ -692,7 +725,7 @@ body, .theme-default {
     --color-orange-rgb: 241, 144, 112;
     --color-orange: #f19070;
     --color-yellow-rgb: 255, 168, 46;
-    --color-yellow: #ffa82e;
+    --color-yellow: #dcb46f;
     --color-cyan-rgb: 111, 210, 194;
     --color-cyan: #6fd2c2;
     --color-blue-rgb: 136, 198, 227;
@@ -726,7 +759,7 @@ body, .theme-default {
     --color-orange-rgb: 241, 144, 112;
     --color-orange: #f19070;
     --color-yellow-rgb: 255, 168, 46;
-    --color-yellow: #ffa82e;
+    --color-yellow: #dcb46f;
     --color-cyan-rgb: 111, 210, 194;
     --color-cyan: #6fd2c2;
     --color-blue-rgb: 136, 198, 227;
@@ -1219,7 +1252,7 @@ body, .theme-default {
     --color-base-40: hsl(calc(0 + var(--accent-h)), 65%, 86%);
     --color-base-50: hsl(calc(0 + var(--accent-h)), 18%, 63%);
     --color-base-60: hsl(calc(0 + var(--accent-h)), 55%, 72%);
-    --color-base-70: hsl(calc(0 + var(--accent-h)), 30%, 60%);
+    --color-base-70: hsl(calc(0 + var(--accent-h)), 5%, 55%);
     --color-base-100: hsl(calc(0 + var(--accent-h)), 5%, 30%);
   }
   .theme-light-and-bright.theme-dark {
@@ -1440,29 +1473,29 @@ body, .theme-default {
     --h6-color: var(--text-normal);
 }
 
-.theme-anytype.colorful-headings h1 {
+.theme-anytype.colorful-headings h1, .theme-anytype.colorful-headings .HyperMD-header-1 {
     background-color: rgba(var(--color-red-rgb), 0.2 );
     padding: 5px 10px 5px 10px;
 }
-.theme-anytype.colorful-headings h2 {
+.theme-anytype.colorful-headings h2, .theme-anytype.colorful-headings .HyperMD-header-2 {
     background-color: rgba(var(--color-orange-rgb), 0.3 );
     padding: 5px 10px 5px 10px;
 }
-.theme-anytype.colorful-headings h3 {
+.theme-anytype.colorful-headings h3, .theme-anytype.colorful-headings .HyperMD-header-3 {
     background-color: rgba(var(--color-yellow-rgb), 0.3 );
     padding: 5px 10px 5px 10px;
 }
-.theme-anytype.colorful-headings h4 {
+.theme-anytype.colorful-headings h4, .theme-anytype.colorful-headings .HyperMD-header-4 {
     background-color: rgba(var(--color-green-rgb), 0.3 );
-    padding: 5px 10px 5px 10px;
+    padding: 5px 0px 5px 10px;
 }
-.theme-anytype.colorful-headings h5 {
+.theme-anytype.colorful-headings h5, .theme-anytype.colorful-headings .HyperMD-header-5 {
     background-color: rgba(var(--color-cyan-rgb), 0.3 );
-    padding: 5px 10px 5px 10px;
+    padding: 3px 10px 3px 10px;
 }
-.theme-anytype.colorful-headings h6 {
+.theme-anytype.colorful-headings h6, .theme-anytype.colorful-headings .HyperMD-header-6 {
     background-color: rgba(var(--color-blue-rgb), 0.3 );
-    padding: 5px 10px 5px 10px;
+    padding: 3px 10px 3px 10px;
 }
 .theme-anytype {
     --accent-h: 45 !important;
@@ -1643,6 +1676,7 @@ body, .theme-default {
     color-scheme: dark;
     --font-default: 'Merienda', cursive;
     --highlight-mix-blend-mode: lighten;
+    --background-modifier-border: #3b3f56;
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
     --accent-h: 41 !important;
@@ -1676,7 +1710,7 @@ body, .theme-default {
     --color-base-70: #8890a6;
     --color-base-100: #989eb2;
     --theme-decoration: '☾';
-    --h1-color: white;
+    --h1-color: rgb(255, 255, 255);
     --h2-color: white;
     --h3-color: white;
     --h4-color: white;
@@ -1711,53 +1745,53 @@ body, .theme-default {
     --h6-color: var(--text-normal);
 }
 
-.theme-notion.theme-light.colorful-headings h1 {
+.theme-notion.theme-light.colorful-headings h1, .theme-notion.theme-light.colorful-headings .HyperMD-header-1 {
     background-color: rgba(var(--color-red-rgb), 0.13);
     padding: 5px 10px 5px 10px;
 }
-.theme-notion.theme-light.colorful-headings h2 {
+.theme-notion.theme-light.colorful-headings h2, .theme-notion.theme-light.colorful-headings .HyperMD-header-2 {
     background-color: rgba(var(--color-orange-rgb), 0.13);
     padding: 5px 10px 5px 10px;
 }
-.theme-notion.theme-light.colorful-headings h3 {
+.theme-notion.theme-light.colorful-headings h3, .theme-notion.theme-light.colorful-headings .HyperMD-header-3 {
     background-color: rgba(var(--color-yellow-rgb), 0.15);
     padding: 5px 10px 5px 10px;
 }
-.theme-notion.theme-light.colorful-headings h4 {
+.theme-notion.theme-light.colorful-headings h4, .theme-notion.theme-light.colorful-headings .HyperMD-header-4{
     background-color: rgba(var(--color-green-rgb), 0.13);
     padding: 5px 10px 5px 10px;
 }
-.theme-notion.theme-light.colorful-headings h5 {
+.theme-notion.theme-light.colorful-headings h5, .theme-notion.theme-light.colorful-headings .HyperMD-header-5 {
     background-color: rgba(var(--color-blue-rgb), 0.13);
-    padding: 5px 10px 5px 10px;
+    padding: 3px 10px 3px 10px;
 }
-.theme-notion.theme-light.colorful-headings h6 {
+.theme-notion.theme-light.colorful-headings h6, .theme-notion.theme-light.colorful-headings .HyperMD-header-6 {
     background-color: rgba(var(--color-purple-rgb), 0.13);
-    padding: 5px 10px 5px 10px;
+    padding: 3px 10px 3px 10px;
 }
-.theme-notion.theme-dark.colorful-headings h1 {
+.theme-notion.theme-dark.colorful-headings h1, .theme-notion.theme-dark.colorful-headings .HyperMD-header-1 {
     background-color: rgba(var(--color-red-rgb), 0.26);
     padding: 5px 10px 5px 10px;
 }
-.theme-notion.theme-dark.colorful-headings h2 {
+.theme-notion.theme-dark.colorful-headings h2, .theme-notion.theme-dark.colorful-headings .HyperMD-header-2 {
     background-color: rgba(var(--color-orange-rgb), 0.26);
     padding: 5px 10px 5px 10px;
 }
-.theme-notion.theme-dark.colorful-headings h3 {
+.theme-notion.theme-dark.colorful-headings h3, .theme-notion.theme-dark.colorful-headings .HyperMD-header-3 {
     background-color: rgba(var(--color-yellow-rgb), 0.26);
     padding: 5px 10px 5px 10px;
 }
-.theme-notion.theme-dark.colorful-headings h4 {
+.theme-notion.theme-dark.colorful-headings h4, .theme-notion.theme-dark.colorful-headings .HyperMD-header-4 {
     background-color: rgba(var(--color-green-rgb), 0.26);
     padding: 5px 10px 5px 10px;
 }
-.theme-notion.theme-dark.colorful-headings h5 {
+.theme-notion.theme-dark.colorful-headings h5, .theme-notion.theme-dark.colorful-headings .HyperMD-header-5 {
     background-color: rgba(var(--color-blue-rgb), 0.26);
-    padding: 5px 10px 5px 10px;
+    padding: 3px 10px 3px 10px;
 }
-.theme-notion.theme-dark.colorful-headings h6 {
+.theme-notion.theme-dark.colorful-headings h6, .theme-notion.theme-dark.colorful-headings .HyperMD-header-6 {
     background-color: rgba(var(--color-purple-rgb), 0.26);
-    padding: 5px 10px 5px 10px;
+    padding: 3px 10px 3px 10px;
 }
 /* - colors and font - */
 .theme-notion {
@@ -1791,7 +1825,7 @@ body, .theme-default {
     border: 1.7px solid var(--text-normal);
 }
 /* - lists - */
-.theme-notion {
+.theme-notion, .theme-anytype {
     --list-marker-color: var(--text-normal);
 }
 
@@ -2170,6 +2204,7 @@ color: rgb(var(--rainbow-folder-color));
     background-color: var(--background-secondary); }
 
 /* ---------- page gallery plug-in ---------- */
+
 .page-gallery__field {
     text-shadow: none;
     word-wrap: break-word;
@@ -2240,7 +2275,6 @@ background: var(--background-secondary-alt);
 .nav-buttons-container, .view-actions, .workspace-tab-header-inner, .side-dock-settings, .side-dock-actions {
     opacity: 1;
 }
-
 /* --- hide buttons --- */
 .hide-buttons.classic-layout {
     --border-width: 0px;
@@ -2273,9 +2307,7 @@ background: var(--background-secondary-alt);
 /* ---------- ultra focus --------- */
 
 /* --- center workspace leaf --- */
-.ultra-focus {
-    --file-line-width: 68%;
-}
+
 .ultra-focus .workspace-leaf-content {
     margin-left: 0px;
     margin-right: 0px;
@@ -2406,25 +2438,6 @@ settings:
         level: 2
         collapsed: true
     -
-        id: border-width
-        title: Border Width
-        type: variable-number-slider
-        default: 1.2
-        min: 1
-        max: 2.5
-        step: 0.1
-        format: px
-    -
-        id: border-radius-average
-        title: Border Radius (Roundness)
-	    description: Adjust the roundness of the panes and other small elements (overriden with classic mode turned on)
-        type: variable-number-slider
-        default: 11
-        min: 0
-        max: 30
-        step: 1
-        format: px
-    -
         id: hide-dividers
         title: Hide Workspace Dividers
         type: class-toggle
@@ -2488,6 +2501,25 @@ settings:
             -
                 label: Rainbow Folder Backgrounds
                 value: folder-rainbow-backgrounds
+    -
+        id: border-width
+        title: Border Width
+        type: variable-number-slider
+        default: 1.2
+        min: 1
+        max: 2.5
+        step: 0.1
+        format: px
+    -
+        id: border-radius-average
+        title: Border Radius (Roundness)
+	    description: Adjust the roundness of the panes and other small elements (overriden with classic mode turned on)
+        type: variable-number-slider
+        default: 11
+        min: 0
+        max: 30
+        step: 1
+        format: px
     -
         id: blockquote-options
         title: Blockquotes
@@ -2781,6 +2813,12 @@ settings:
     -
         id: colored-bold-and-italic
         title: Colorful bold and italic text
+        type: class-toggle
+        default: false
+    -
+        id: underlined-highlight
+        title: Underlined Highlights
+        description: Show highlights as underlined text.
         type: class-toggle
         default: false
     -
