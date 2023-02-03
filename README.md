@@ -1,19 +1,17 @@
 # 🔔 Chime
+
 ![](Macaroon.png)
-A lightweight theme for Obsidian designed to be simple yet highly customizable.
-# Features
-![](themes.gif)
-## ✒️ Customizability (with Style Settings plug-in)
+Chime was designed with a special intention to not overwhelm you with options. Customization options are given for various components without going past only what's most important.
+# Features (Style Settings plug-in)
 - 12 different color schemes
-- Choose between the Card and Classic layout styles.
-- Hide certain components or even enable full-screen mode for maximum focus.
-- Options for styling blockquotes, headings, checkboxes, and more.  
-## ✅ Simplicity
-Chime was designed with a special intention to not overwhelm you with options. Customizability is given for only the most important components.
-## 🚩 CSS Classes
-Chime includes four css classes that may come in handy to some people.
+- Two different layout styles.
+- Hide certain buttons and enable full-screen **Focus Mode**
+- Special settings for the page-gallery plug-in
+- Options for styling blockquotes, headings, checkboxes, links, and more.  
+# CSS Classes
+Chime includes four css classes that may come in handy to some people. 
 ### Wiki-page Class
-Format your note like a wiki page. This class floats images, blockquotes, and callouts to the right and formats headings and text. To use, type `cssClasses: wiki-page` in a note's frontmatter.
+Format your note like a wiki page. This class floats images and info blockquotes to the right and formats headings and text. To use, type `cssClasses: wiki-page` in a note's frontmatter.
 
 ![](wiki-page.png)
 ### Novel Class
@@ -44,8 +42,6 @@ Chime makes minor changes to the **Pages Gallery** plug-in and gives it an appea
 
 ![](page-gallery.png)
 
-### Cardboard
-An extremely minor change has been made to the text color.
 
 # ⭐ Credits
 A special thanks to...
@@ -59,5 +55,5 @@ A special thanks to...
 # 📋 To-Do
 - [x] update README
 - [x] Add header bottom border option
-- [ ] Add custom link and tag options
+- [x] Add custom link and tag options
  
