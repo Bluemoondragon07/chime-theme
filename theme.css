@@ -3,13 +3,29 @@
 
 /* ---------- fonts ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overlock&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Moulpali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Libre+Baskerville&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
+/* -- custom font -- */
+.custom-font-toggle {
+    --font-default: var(--custom-font), sans-serif !important;
+}
 
 /* ---------- main layout ----------*/
 
@@ -27,6 +43,10 @@ body.classic-layout, .is-mobile {
 /* --- cardboard plugin --- */
 .card-board-view {
     color: var(--text-muted);
+}
+.card-board-column {
+    background-color: var(--background-primary-alt);
+    border: var(--border-width) var(--line-style) var(--background-modifier-border);
 }
 
 /* --- line style ---*/
@@ -406,20 +426,20 @@ width: fit-content;
     --tag-radius: 3px;
 }
 .tag-button {
---tag-background: var(--code-background);
+--tag-background: var(--background-primary);
 --tag-background-hover: var(--code-background);
 --tag-color: var(--text-normal);
 --tag-color-hover: var(--text-normal);
 --tag-radius: 0.8em;
---tag-border-color: var(--color-base-25);
---tag-border-width: 1.2px;
+--tag-border-color: var(--background-modifier-border);
+--tag-border-width: 1px;
 --tag-border-color-hover: var(--color-base-25);
 }
 .tag-button a.tag, .tag-button .editor .cm-hashtag {
-    -webkit-box-shadow: 0 -1px 7px -1px rgb(118 118 118 / 10%) inset;
+    -webkit-box-shadow: 0 -1px 7px -1px rgb(118 118 118 / 20%) inset;
 }
 .tag-button a.tag:hover, .tag-button .editor .cm-hashtag:hover {
-    -webkit-box-shadow: 0 -1px 10px -1px rgb(118 118 118 / 20%) inset;
+    -webkit-box-shadow: 0 -1px 7px -1px rgb(118 118 118 / 10%) inset;
 }
 
 /* ---------- links ---------- */
@@ -429,6 +449,7 @@ width: fit-content;
 }
 .external-link {
     background-image: none;
+    padding-right: unset;
 }
 
 .link-web {
@@ -450,13 +471,14 @@ width: fit-content;
 }
 .link-button .internal-link, .link-button .external-link,
 .link-button .markdown-source-view.mod-cm6 .cm-underline {
-    background-color: var(--code-color);
-    -webkit-box-shadow: 0 -1px 7px -1px rgb(118 118 118 / 20%) inset;
+    background-color: var(--background-primary);
+    -webkit-box-shadow: 0 -1px 7px -1px rgb(118 118 118 / 15%) inset;
     padding: 1px 10px;
     border-radius: 0.4em;
-    border: solid var(--color-base-25) 1.2px;
+    border: solid var(--background-modifier-border) 1.1px;
     background-image: none;
-
+    white-space: nowrap;
+    overflow:hidden;
 }
 .link-button .internal-link:hover, .link-button .external-link:hover,
 .link-button .markdown-source-view.mod-cm6 .cm-underline:hover {
@@ -467,25 +489,29 @@ width: fit-content;
     --link-unresolved-color: var(--text-muted);
     --link-unresolved-decoration-color: var(--background-modifier-border-hover);
 }
-.link-em .internal-link, .link-em .external-link,
-.link-em .markdown-source-view.mod-cm6 .cm-underline {
+.link-em .internal-link, .link-em .external-link {
 color: var(--text-normal);
 text-decoration: underline var(--background-modifier-border) 2.3px;
 text-underline-offset: 0.19em;
+}
+.link-em .markdown-source-view.mod-cm6 .cm-underline {
+    color: var(--text-normal);
+    text-decoration: underline var(--background-modifier-border) 2.3px;
 }
 .link-em .internal-link:hover, .link-em .external-link:hover,
 .link-em .markdown-source-view.mod-cm6 .cm-underline:hover {
 color: var(--color-accent-2);
 text-decoration: underline var(--color-accent-1) 4px;
 }
-.link-em .internal-link::before, .link-em .external-link::before,
-.link-em .markdown-source-view.mod-cm6 .cm-underline::before {
+.link-em .internal-link::before, .link-em .external-link::before {
     content: "🡭";
     margin-right: 0.3em;
     display: inline-block;
     font-size: 0.8em;
-
+    font-weight: 600;
+    font-family: 'Noto Sans Symbols 2', sans-serif;
 }
+
 /* -------- wide page css class -------- */
 .wide {
     --file-line-width: 100%;
@@ -530,11 +556,23 @@ body{
 .markdown-rendered blockquote, .blockquote-normal .markdown-rendered blockquote {
     padding-top: 10px;
     padding-bottom: 10px;
-    border-top-right-radius: var(--radius-s);
-    border-bottom-right-radius: var(--radius-s);
     z-index: 2;
     font-style: italic;
     position: relative;
+    border-left-width: 5px;
+    padding-left: 15px;
+}
+.markdown-rendered blockquote p, .blockquote-normal .markdown-rendered blockquote p {
+display: inline;
+}
+.blockquote-mark .markdown-rendered blockquote::before {
+    font-style: normal;
+    content: "❛❛";
+    display:inline;
+    font-size: 2.25em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+    margin-right: 15px;
 }
 .blockquote-block .markdown-rendered blockquote {
     border-radius: var(--radius-s);
@@ -547,6 +585,7 @@ body{
     padding-top: 0px;
     padding-bottom: 0px;
     font-style: normal;
+    border-width: 2px;
 }
 .blockquote-minimal .markdown-rendered blockquote {
     background-color: transparent;
@@ -555,6 +594,7 @@ body{
     border-color: var(--text-faint);
     color: var(--text-faint);
     font-style: normal;
+    border-width: 1.8px;
 }
 .blockquote-floating .markdown-rendered blockquote {
     background-color: transparent;
@@ -563,6 +603,12 @@ body{
     border: 1.2px var(--line-style) var(--background-modifier-border);
 	box-shadow: var(--shadow-s);
     position: relative;
+    font-style: normal;
+}
+.blockquote-sleek .markdown-rendered blockquote {
+    border: 1px solid;
+    border-color: var(--background-modifier-border) !important;
+    border-left-width: 6px;
     font-style: normal;
 }
 
@@ -664,12 +710,12 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
 }
 /* ----- colorful headings class */
 .colorful-headings {
-    --h1-color: var(--color-accent);
-    --h2-color: hsl(calc(var(--accent-h) + 20), calc(var(--accent-s) - 5%), calc(var(--accent-l) - 2%));
-    --h3-color: hsl(calc(var(--accent-h) + 35), calc(var(--accent-s) - 10%), calc(var(--accent-l) - 4%));
-    --h4-color: hsl(calc(var(--accent-h) + 50), calc(var(--accent-s) - 20%), calc(var(--accent-l) - 6%));
-    --h5-color: hsl(calc(var(--accent-h) + 65), calc(var(--accent-s) - 25%), calc(var(--accent-l) - 10%));
-    --h6-color: hsl(calc(var(--accent-h) + 80), calc(var(--accent-s) - 30%), calc(var(--accent-l) - 10%));
+    --h1-color: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 10%));
+    --h2-color: hsl(calc(var(--accent-h) + 40), calc(var(--accent-s) - 5%), calc(var(--accent-l) - 15%));
+    --h3-color: hsl(calc(var(--accent-h) + 80), calc(var(--accent-s) - 25%), calc(var(--accent-l) - 15%));
+    --h4-color: hsl(calc(var(--accent-h) + 130), calc(var(--accent-s) - 30%), calc(var(--accent-l) - 15%));
+    --h5-color: hsl(calc(var(--accent-h) + 180), calc(var(--accent-s) - 35%), calc(var(--accent-l) - 15%));
+    --h6-color: hsl(calc(var(--accent-h) + 240), calc(var(--accent-s) - 55%), calc(var(--accent-l) - 15%));
 }
 .colorful-headings-alt {
     --h1-color: var(--color-red);
@@ -704,7 +750,7 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
     --h6-color: var(--color-blue);
 }
 .colorful-headings.theme-default {
---h1-color: rgb(223, 178, 185);
+--h1-color: rgb(217, 174, 180);
 --h2-color: rgb(218, 178, 201);
 --h3-color: rgb(200, 165, 200);
 --h4-color: rgb(191, 165, 199);
@@ -749,21 +795,7 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
 padding-bottom: 2px;
 border-bottom: 1.4px var(--line-style) var(--hr-color);
 }
-.h1-bottom-border.colorful-headings h1,
-.h1-bottom-border.colorful-headings .HyperMD-header-1,
-.h2-bottom-border.colorful-headings h2,
-.h2-bottom-border.colorful-headings .HyperMD-header-2,
-.h3-bottom-border.colorful-headings h3,
-.h3-bottom-border.colorful-headings .HyperMD-header-3,
-.h4-bottom-border.colorful-headings h4,
-.h4-bottom-border.colorful-headings .HyperMD-header-4,
-.h5-bottom-border.colorful-headings h5,
-.h5-bottom-border.colorful-headings .HyperMD-header-5,  
-.h6-bottom-border.colorful-headings h6,
-.h6-bottom-border.colorful-headings .HyperMD-header-6 {
-padding-bottom: 2px;
-border-bottom: 1.4px var(--line-style);
-}
+
 .h1-bottom-border.colorful-headings.theme-notion h1,
 .h1-bottom-border.colorful-headings.theme-notion .HyperMD-header-1,
 .h2-bottom-border.colorful-headings.theme-notion h2,
@@ -879,7 +911,7 @@ body {
 
 /* ----- default (Macaroon) theme ----- */
 body, .theme-default {
-    --font-default: 'Overlock', cursive;
+    --font-default: 'Arima', cursive;
 }
 
 .theme-light, .theme-default.theme-light {
@@ -903,10 +935,10 @@ body, .theme-default {
     --color-purple: #b584c7;
     --color-pink-rgb: 220, 118, 167;
     --color-pink: #dc76a7;
-    --color-base-00: #fffefb;
+    --color-base-00: #fffdf8;
     --color-base-05: #faf3f1;
     --color-base-10: #f0e9e4;
-    --color-base-20: #e1d6d6;
+    --color-base-20: #e7d8d8;
     --color-base-25: #d9c9ca;
     --color-base-30: #cec2c577;
     --color-base-35: #b5a7ac;
@@ -955,9 +987,15 @@ body, .theme-default {
   .theme-crystal.theme-light .vertical-tab-nav-item {
     color: var(--text-muted);
   }
+  
   .theme-crystal {
-    --font-default:  'Yu Micho', 'Franklin Gothic', 'Lucida Sans', sans-serif;
+    --font-default:  'IBM Plex Sans', 'Yu Micho', 'Franklin Gothic', 'Lucida Sans', sans-serif;
     --nav-item-color-active: var(--color-accent);
+  }
+  .theme-crystal .nav-folder.mod-root > .nav-folder-title {
+    color: var(--color-accent);
+    font-weight: 900;
+    font-size: 1.25em;
   }
   
   .theme-crystal.theme-light {
@@ -965,13 +1003,13 @@ body, .theme-default {
     --icon-color-focused: var(--interactive-accent);
     --highlight-mix-blend-mode: darken;
     --vault-name-color: var(--color-accent-1);
+    --accent-h: 0;
+    --accent-s: 69%;
+    --accent-l: 59%;
     --mono-rgb-0: 255, 255, 255;
     --mono-rgb-100: 0, 0, 0;
-    --accent-h: 0 !important;
-    --accent-s: 79% !important;
-    --accent-l: 59% !important;
     --color-red-rgb: 255, 0, 0;
-    --color-red: #d96943;
+    --color-red: #c75d5d;
     --color-green-rgb: 8, 185, 78;
     --color-green: #a2bb79;
     --color-orange-rgb: 246, 78, 0;
@@ -986,6 +1024,22 @@ body, .theme-default {
     --color-purple: #969cc1;
     --color-pink-rgb: 126, 88, 216;
     --color-pink: #b69ac2;
+    
+    --color-base-00: #e8e8e8;
+    --color-base-05: #e2e2e2;
+    --color-base-10: #dadada;
+    --color-base-20: #a8a8a8;
+    --color-base-25: #959595;
+    --color-base-30: #7b7b7b4c;
+    --color-base-35: #757575;
+    --color-base-40: #5e5e5e;
+    --color-base-50: #8d8d8d;
+    --color-base-60: #2f3234;
+    --color-base-70: #717171;
+    --color-base-100: #000000;
+    --background-secondary: var(--color-base-60);
+    
+    /* 
     --color-base-00: #e2e9ed;
     --color-base-05: #c5d5de;
     --color-base-10: #ccd9e1;
@@ -998,16 +1052,19 @@ body, .theme-default {
     --color-base-60: #7a5757;
     --color-base-70: #617686;
     --color-base-100: #222222;
+    */
   }
+
+
   .theme-crystal.theme-dark {
     color-scheme: dark;
     --vault-name-color: var(--color-accent-1);
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
+    --accent-h: 0;
+    --accent-s: 65%;
+    --accent-l: 62%;
     --mono-rgb-100: 255, 255, 255;
-    --accent-h: 5 !important;
-    --accent-s: 59% !important;
-    --accent-l: 60% !important;
     --color-red-rgb: 228, 111, 125;
     --color-red-rgb: 255, 0, 0;
     --color-red-rgb: 255, 0, 0;
@@ -1026,23 +1083,36 @@ body, .theme-default {
     --color-purple: #969cc1;
     --color-pink-rgb: 126, 88, 216;
     --color-pink: #b69ac2;
+    /*
+    --color-base-00: #32373e;
+    --color-base-10: #3c4249;
+    --color-base-20: #1d1f22;
+    --color-base-25: #4e545c;
+    --color-base-30: #575e6765;
+    --color-base-35: #697179;
+    --color-base-40: #7b848e;
+    --color-base-50: #8b949f;
+    --color-base-60: #919ba6;
+    --color-base-70: #757b82;
+    --color-base-100: #a1abb7;
+    */
     --color-base-00: #2d323a;
-    --color-base-10: #483437;
+    --color-base-10: #3a3f42;
     --color-base-20: #26272e;
     --color-base-25: #262323;
     --color-base-30: #373d48;
-    --color-base-35: #765454;
+    --color-base-35: #546a76;
     --color-base-40: rgb(105, 122, 142);
-    --color-base-50: rgb(142, 81, 81);
-    --color-base-60: rgb(202, 112, 112);
+    --color-base-50: rgb(74, 98, 138);
+    --color-base-60: rgb(122, 139, 165);
     --color-base-70: #65707d;
-    --color-base-100: #b5a4a4;
+    --color-base-100: #a4acb5;
   }
 
   /* ----- spring theme ----- */
 
   .theme-spring {
-    --font-default: 'Handlee', cursive;
+    --font-default: 'Courgette', 'Handlee', cursive;
   }
 
   .theme-spring.colored-bold-and-italic {
@@ -1076,7 +1146,7 @@ body, .theme-default {
     --color-base-00: #fdfff5;
     --color-base-05: #f4f8e2;
     --color-base-10: #e7eed4;
-    --color-base-20: #e5f1d4;
+    --color-base-20: #e3efd2;
     --color-base-25: #ddeace;
     --color-base-30: rgb(186, 209, 177);
     --color-base-35: #a5c1a1;
@@ -1128,7 +1198,7 @@ body, .theme-default {
     --font-default: 'Libre Baskerville', Georgia, 'Baskerville Old Face', 'Book Antiqua', sans-serif;
   }
   .novel {
-    --font-text: 'Libre Baskerville', Georgia, 'Baskerville Old Face', 'Book Antiqua', sans-serif !important;
+    --font-text: 'Libre Baskerville', Georgia, 'Baskerville Old Face', 'Book Antiqua', Alice, 'EB Garamond', sans-serif !important;
     --inline-title-color: var(--text-normal);
   }
   .novel img {
@@ -1240,10 +1310,10 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
     --color-base-00: #4d3d2e;
-    --color-base-10: #4c3e2b;
+    --color-base-10: #574534;
     --color-base-20: #3a2e20;
     --color-base-25: #574c40;
-    --color-base-30: #695d4f;
+    --color-base-30: #5f4b38;
     --color-base-35: #847163;
     --color-base-40: rgb(146, 130, 111);
     --color-base-50: rgb(167, 153, 146);
@@ -1464,11 +1534,11 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --color-pink-rgb: 255, 148, 200;
     --color-pink: #ff94c8;
     --color-base-00: hsl(calc(0 + var(--accent-h)), 100%, 99.5%);
-    --color-base-05: hsl(calc(0 + var(--accent-h)), 50%, 97%);
-    --color-base-10: hsl(calc(0 + var(--accent-h)), 90%, 97%);
-    --color-base-20: hsl(calc(0 + var(--accent-h)), 35%, 95.5%);
-    --color-base-25: hsl(calc(0 + var(--accent-h)), 80%, 92%);
-    --color-base-30: hsl(calc(0 + var(--accent-h)), 35%, 85%);
+    --color-base-05: hsl(calc(0 + var(--accent-h)), 40%, 96.5%);
+    --color-base-10: hsl(calc(0 + var(--accent-h)), 30%, 95.9%);
+    --color-base-20: hsl(calc(0 + var(--accent-h)), calc(var(--accent-s) - 5%), calc(95% - calc(var(--accent-l)/100)));
+    --color-base-25: hsl(calc(0 + var(--accent-h)), 80%, 42%);
+    --color-base-30: hsl(calc(0 + var(--accent-h)), calc(var(--accent-s) - 55%), 89%);
     --color-base-35: hsl(calc(0 + var(--accent-h)), 70%, 88%);
     --color-base-40: hsl(calc(0 + var(--accent-h)), 65%, 86%);
     --color-base-50: hsl(calc(0 + var(--accent-h)), 18%, 63%);
@@ -1497,17 +1567,17 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --color-purple: #b584c7;
     --color-pink-rgb: 255, 148, 200;
     --color-pink: #ff94c8;
-    --color-base-00:hsl(calc(0 + var(--accent-h)), 11%, 25.5%);
-    --color-base-10: hsl(calc(0 + var(--accent-h)), 10.5%, 22.5%);
-    --color-base-20: hsl(calc(0 + var(--accent-h)), 10%, 20%);
-    --color-base-25: hsl(calc(0 + var(--accent-h)), 11.5%, 28%);
-    --color-base-30: hsl(calc(0 + var(--accent-h)), 12%, 38%);
-    --color-base-35: hsl(calc(0 + var(--accent-h)), 14%, 34%);
-    --color-base-40: hsl(calc(0 + var(--accent-h)), 16%, 38%);
+    --color-base-00:hsl(calc(0 + var(--accent-h)), 11%, 15.5%);
+    --color-base-10: hsl(calc(0 + var(--accent-h)), 11.5%, 18.5%);
+    --color-base-20: hsl(calc(0 + var(--accent-h)), 10%, 12%);
+    --color-base-25: hsl(calc(0 + var(--accent-h)), 11.5%, 10%);
+    --color-base-30: hsl(calc(0 + var(--accent-h)), 12%, 23%);
+    --color-base-35: hsl(calc(0 + var(--accent-h)), 14%, 11%);
+    --color-base-40: hsl(calc(0 + var(--accent-h)), 16%, 12%);
     --color-base-50: hsl(calc(0 + var(--accent-h)), 18%, 55%);
-    --color-base-60: hsl(calc(0 + var(--accent-h)), 20%, 60%);
-    --color-base-70: hsl(calc(0 + var(--accent-h)), 22%, 64%);
-    --color-base-100: hsl(calc(0 + var(--accent-h)), 15%, 78%);
+    --color-base-60: hsl(calc(0 + var(--accent-h)), 20%, 13%);
+    --color-base-70: hsl(calc(0 + var(--accent-h)), 15%, 45%);
+    --color-base-100: hsl(calc(0 + var(--accent-h)), 15%, 75%);
   }
 
   /* --- dividers --- */
@@ -1709,7 +1779,16 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --h5-color: var(--text-normal);
     --h6-color: var(--text-normal);
 }
+.theme-anytype.colorful-headings-alt {
+    --h1-color: var(--color-blue);
+    --h2-color: var(--color-cyan);
+    --h3-color: var(--color-green);
+    --h4-color: var(--color-yellow);
+    --h5-color: var(--color-orange);
+    --h6-color: var(--color-red);
+    
 
+}
 .theme-anytype.colorful-headings h1, .theme-anytype.colorful-headings .HyperMD-header-1 {
     background-color: rgba(var(--color-red-rgb), 0.2 );
     padding: 5px 10px 5px 10px;
@@ -1809,7 +1888,7 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --color-base-10: #32312f;
     --color-base-20: rgb(28, 26, 23);
     --color-base-25: #21201e;
-    --color-base-30: #21201e;
+    --color-base-30: #2e2c29;
     --color-base-35: #484643;
     --color-base-40: #605d5a;
     --color-base-50: #7b7974;
@@ -1967,15 +2046,22 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     font-family: 'Yu Gothic', 'Inter', sans-serif !important;
 }
 
-/* --- notion theme --- */
+/* ----- notion theme ----- */
 /* - bold and italic colors - */
 .theme-notion.colored-bold-and-italic {
     --bold-color: var(--color-red);
     --italic-color: var(--color-blue);
 }
 
-/* - headings - */
-.theme-notion.colorful-headings, .novel {
+/* - dividers - */
+.theme-notion hr {
+    margin: 0px;
+    border-width: 1px;
+    opacity: 0.5;
+}
+
+/* --- headings ---- */
+.theme-notion.colorful-headings, .novel, .theme-notion.colorful-headings-alt {
     --h1-color: var(--text-normal);
     --h2-color: var(--text-normal);
     --h3-color: var(--text-normal);
@@ -1984,6 +2070,7 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --h6-color: var(--text-normal);
 }
 
+/* - colorful headings -*/
 .theme-notion.theme-light.colorful-headings h1, .theme-notion.theme-light.colorful-headings .HyperMD-header-1 {
     background-color: rgba(var(--color-red-rgb), 0.13);
     padding: 5px 10px 5px 10px;
@@ -2040,6 +2127,25 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --callout-quote: 120, 119, 116;
     --font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   }
+
+/* - alternate colorful headings - */
+
+
+.theme-notion.colorful-headings-alt h2, .theme-notion.colorful-headings-alt .HyperMD-header-2,
+.theme-notion.colorful-headings-alt h3, .theme-notion.colorful-headings-alt .HyperMD-header-3,
+.theme-notion.colorful-headings-alt h4, .theme-notion.colorful-headings-alt .HyperMD-header-4 {
+    background-color: var(--color-gray);
+    padding: 5px 4px 5px 4px;
+    border-bottom: none !important;
+}
+.theme-notion.colorful-headings-alt h5, .theme-notion.colorful-headings-alt .HyperMD-header-5,
+.theme-notion.colorful-headings-alt h6, .theme-notion.colorful-headings-alt .HyperMD-header-6 {
+    background-color: var(--color-gray);
+    padding: 3px 0px 4px 4px;
+    border-bottom: none !important;
+}
+
+
 
 /* --- callouts --- */
 .theme-notion.theme-light .callout {
@@ -2104,6 +2210,8 @@ border-radius: 0px;
     --color-purple: #9065B0;
     --color-pink-rgb: 193, 76, 138;
     --color-pink:  #C14C8A;
+    --color-gray-rgb: 245, 245, 245;
+    --color-gray: #f2f2f2;
   }
   .theme-notion.theme-dark {
     color-scheme: dark;
@@ -2121,6 +2229,7 @@ border-radius: 0px;
     --color-base-70: #a0a0a0;
     --color-base-100: rgba(255, 255, 255, 0.81);
     --color-red-rgb: 212, 76, 71;
+    --color-gray: #363636a3;
     --color-red: #D44C47;
     --color-green-rgb: 79, 131, 68;
     --color-green: #4f8344;
@@ -2136,6 +2245,7 @@ border-radius: 0px;
     --color-purple: #9065B0;
     --color-pink-rgb: 193, 76, 138;
     --color-pink:  #C14C8A;  
+   
 }
 
 /* ---------- rainbow folders ---------- */
@@ -2156,7 +2266,9 @@ border-radius: 0px;
     --nav-collapse-icon-color-collapsed: var(--text-normal);
 }
 .folder-rainbow-backgrounds.theme-crystal .nav-folder-title {
-    background-color: rgba(var(--rainbow-folder-color), 0.3);
+    background-color: rgba(var(--rainbow-folder-color), 0.13);
+    border: 0.25px solid rgb(var(--rainbow-folder-color));
+    margin-bottom: 5px;
     color: rgb(var(--rainbow-folder-color));
     --nav-collapse-icon-color: rgb(var(--rainbow-folder-color));
     --nav-collapse-icon-color-collapsed:rgb(var(--rainbow-folder-color));
@@ -2500,8 +2612,8 @@ background: var(--background-secondary-alt);
 
 .page-gallery__fallback:hover {
     background: linear-gradient(to bottom right,
-        var(--background-secondary),
-        var(--background-modifier-border));
+        var(--code-color),
+        var(--background-secondary));
         box-shadow: var(--shadow-s);
 }
 
@@ -2821,6 +2933,14 @@ settings:
             - 
                 label: Floating Card
                 value: blockquote-floating
+            -
+                label: Sleek
+                value: blockquote-sleek
+    -
+        id: blockquote-mark
+        title: Quote Marking
+        type: class-toggle
+        default: false
     -
         id: callout-options
         title: Callouts
@@ -2956,7 +3076,7 @@ settings:
         id: h1-weight
         title: Header 1 Weight
         type: variable-number
-        default: 700
+        default: 600
     -
         id: h1-variant
         title: Header 1 Font Variant
@@ -3161,6 +3281,36 @@ settings:
         description: Increase line height and paragraph spacing for more readability.
         type: class-toggle
         default: false
+    -
+        id: custom-font-toggle
+        title: Enable custom font
+        type: class-toggle
+        default: false
+    -
+        id: custom-font
+        title: Custom font
+        type: variable-select
+        description: This will override theme fonts, but it will not override any font defined in Settings/Appearance.
+        default: Monsterrat
+        options:
+            - Hindi
+            - Roboto
+            - 'IBM Plex Sans'
+            - Forum
+            - 'EB Garamond'
+            - Alice
+            - Comfortaa
+            - Nunito
+            - Montserrat
+            - Merienda
+            - Handlee
+            - Arima
+            - Courgette
+            - 'Inknut Antiqua'
+            - 'Averia Gruesa Libre'
+            - 'Anonymous Pro'
+            - 'Space Mono'
+            - 'Ubuntu Mono'
     -
         id: plugin-options
         title: Plugins
