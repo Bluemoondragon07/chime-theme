@@ -4,14 +4,14 @@
 
 Chime was designed with a special intention to not overwhelm you with options. Built on the principle of highly customizable simplicity, **Chime** provides vast personalization options without going past only what's most important.
 
-# Features (Style Settings plug-in)
+# ⭐ Features (Style Settings plug-in)
 - 12 different **color schemes**
 - Two different **layout styles.**
 - Hide certain buttons and enable full-screen **Focus Mode**
 - Special style settings for the **page-gallery plug-in**
 - Options for styling **blockquotes, headings, checkboxes, links,** and *more*.  
 
-## CSS Classes
+# 🔖 CSS Classes
 Chime includes four css classes that may come in handy to some people. 
 ### Wiki-page Class
 Format your note like a wiki page. This class floats images and info blockquotes to the right and formats headings and text. To use, type `cssClasses: wiki-page` in a note's frontmatter.
@@ -36,7 +36,7 @@ This class will make items in dataview tables show up in a card-like grid. To us
 
 ![](cards.png)
 
-## 🔌 Compatible Plug-Ins
+# 🔌 Compatible Plug-Ins
 ### Dataview
 **Chime** includes styling for inline metadata and dataview tables. The `cards` class also utilizes this plug-in.
 
@@ -46,7 +46,7 @@ Chime makes minor changes to the **Pages Gallery** plug-in and gives it an appea
 ![](page-gallery.png)
 
 
-# ⭐ Credits
+# 💖 Credits
 A special thanks to...
 - kepano for their amazing Minimal theme
   - Inspiration
