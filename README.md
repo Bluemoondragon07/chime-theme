@@ -4,37 +4,25 @@
 
 Chime was designed with a special intention to not overwhelm you with options. Built on the principle of highly customizable simplicity, **Chime** provides vast personalization options without going past only what's most important.
 
-# ⭐ Features (Style Settings plug-in)
+# Features 
+With the Style Settings plug-in, **Chime** boasts the following features:
 - 12 different **color schemes**
 - Two different **layout styles.**
 - Hide certain buttons and enable full-screen **Focus Mode**
 - Special style settings for the **page-gallery plug-in**
 - Options for styling **blockquotes, headings, checkboxes, links,** and *more*.  
+- Four special css classes
 
-# 🔖 CSS Classes
+# CSS Classes
 Chime includes four css classes that may come in handy to some people. 
-### Wiki-page Class
-Format your note like a wiki page. This class floats images and info blockquotes to the right and formats headings and text. To use, type `cssClasses: wiki-page` in a note's frontmatter.
 
-![](wiki-page.png)
-## Novel Class
-Format your note like a page in a book. This class changes the font, indentation, and paragraph spacing. Pressing enter once creates a normal paragraph without an indent (great if you don't like indented dialogue), while pressing enter twice, like you would usually create a paragraph in Obsidian, creates an indented paragraph. Both paragraphs are evenly spaced in preview mode. 
-To use, type `Cssclasses: novel` in the frontmatter of a note.
+| Image| Class | Description |
+|--------------------|-----------|---------------------|
+|![](wiki-page.png)| `wiki-page` | Format your note like a wiki page. This class floats **images** and **info blockquotes** to the right and formats headings and text.|
+| ![](novel.png) | `novel` | Format your note like a page in a book. This class changes the **font, indentation, and paragraph spacing.** Pressing enter **once** creates a **normal paragraph** without an indent (great if you don't like indented dialogue), while pressing enter **twice**, like you would usually create a paragraph in Obsidian, creates an **indented paragraph**. Both paragraphs are evenly spaced in preview mode. |
+|![](wide.png)| `wide` | Makes a note wide even when Readable Line Length is turned on. |
+|![](cards.png)| `cards` (by [kepano](https://github.com/kepano)) | <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy kepano a coffee&emoji=&slug=kepano&button_colour=6a8695&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a> <br> <br> Makes dataview tables show up as a grid of cards. Originally created by kepano for the Minimal theme. |
 
-![](novel.png)
-
-## Wide Class
-Sometimes I wish Obsidian was more like Notion and allowed me to make certain pages automatically wider without messing with settings--Which is why I made this CSS class. This will make a note wide even when Readable Line Length is turned on. To use, type `Cssclasses: wide` in the frontmatter.
-
-![](wide.png)
-## Cards Class (by kepano)
-The spectacular cards CSS class was originally created for the Minimal Theme by kepano.
-
-<a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy kepano a coffee&emoji=&slug=kepano&button_colour=6a8695&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
-
-This class will make items in dataview tables show up in a card-like grid. To use, type `cssClasses: cards` in the frontmatter. This class requires the **dataview** plug-in.
-
-![](cards.png)
 
 # 🔌 Compatible Plug-Ins
 ## Dataview
