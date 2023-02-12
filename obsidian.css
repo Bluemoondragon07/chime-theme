@@ -231,6 +231,8 @@ body {
     text-overflow: ellipsis;
     width: 100%;
 }
+
+
 .workspace-tab-header-container {
     background-color: transparent;
     border-bottom: none;
@@ -989,6 +991,10 @@ body, .theme-default {
   .theme-crystal.theme-light .vertical-tab-nav-item {
     color: var(--text-muted);
   }
+  .theme-crystal .nav-file-title:hover,
+  .theme-ash-old .nav-file-title:hover {
+    color: var(--interactive-accent) !important;
+  }
   
   .theme-crystal {
     --font-default:  'IBM Plex Sans', 'Yu Micho', 'Franklin Gothic', 'Lucida Sans', sans-serif;
@@ -1110,6 +1116,103 @@ body, .theme-default {
     --color-base-70: #65707d;
     --color-base-100: #a4acb5;
   }
+
+
+  /* ----- old ash theme ----- */
+
+  .theme-ash-old.theme-light .vertical-tab-nav-item {
+    color: var(--text-muted);
+  }
+  .theme-ash-old .nav-folder.mod-root > .nav-folder-title {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+
+  .theme-ash-old {
+    --font-default: 'Hindi', 'Moulpali', 'Bahnschrift', sans-serif;
+    --nav-item-color-active: var(--color-accent);
+  }
+  
+  .theme-ash-old.theme-light {
+    color-scheme: light;
+    --icon-color-focused: var(--interactive-accent);
+    --highlight-mix-blend-mode: darken;
+    --vault-name-color: var(--color-accent-1);
+    --mono-rgb-0: 255, 255, 255;
+    --mono-rgb-100: 0, 0, 0;
+    --accent-h: 0 !important;
+    --accent-s: 79% !important;
+    --accent-l: 59% !important;
+    --color-red-rgb: 255, 0, 0;
+    --color-red: #ff0000;
+    --color-green-rgb: 8, 185, 78;
+    --color-green: #00c445;
+    --color-orange-rgb: 246, 78, 0;
+    --color-orange: #f64e00;
+    --color-yellow-rgb: 255, 128, 0;
+    --color-yellow: #ff8000;
+    --color-cyan-rgb: 0, 179, 149;
+    --color-cyan: #00b395;
+    --color-blue-rgb: 0, 181, 197;
+    --color-blue: #00b5c5;
+    --color-purple-rgb: 82, 131, 238;
+    --color-purple: #5283ee;
+    --color-pink-rgb: 126, 88, 216;
+    --color-pink: #7e58d8;
+    --color-base-00: #e2e9ed;
+    --color-base-05: #c5d5de;
+    --color-base-10: #ccd9e1;
+    --color-base-20: #2c323b;
+    --color-base-25: #bac5d0;
+    --color-base-30: #5f728f41;
+    --color-base-35: #e05f5f;
+    --color-base-40: #9facbb;
+    --color-base-50: #5877a2;
+    --color-base-60: #7a5757;
+    --color-base-70: #617686;
+    --color-base-100: #222222;
+  }
+  .theme-ash-old.theme-dark {
+    color-scheme: dark;
+    --vault-name-color: var(--color-accent-1);
+    --highlight-mix-blend-mode: lighten;
+    --mono-rgb-0: 0, 0, 0;
+    --mono-rgb-100: 255, 255, 255;
+    --accent-h: 5 !important;
+    --accent-s: 59% !important;
+    --accent-l: 60% !important;
+    --color-red-rgb: 228, 111, 125;
+    --color-red-rgb: 255, 0, 0;
+    --color-red: #ff0000;
+    --color-green-rgb: 8, 185, 78;
+    --color-green: #00c445;
+    --color-orange-rgb: 246, 78, 0;
+    --color-orange: #f64e00;
+    --color-yellow-rgb: 255, 128, 0;
+    --color-yellow: #ff8000;
+    --color-cyan-rgb: 0, 179, 149;
+    --color-cyan: #00b395;
+    --color-blue-rgb: 0, 181, 197;
+    --color-blue: #00b5c5;
+    --color-purple-rgb: 82, 131, 238;
+    --color-purple: #5283ee;
+    --color-pink-rgb: 126, 88, 216;
+    --color-pink: #7e58d8;
+    --color-base-00: #2d323a;
+    --color-base-10: #483437;
+    --color-base-20: #26272e;
+    --color-base-25: #262323;
+    --color-base-30: #373d48;
+    --color-base-35: #765454;
+    --color-base-40: rgb(105, 122, 142);
+    --color-base-50: rgb(142, 81, 81);
+    --color-base-60: rgb(202, 112, 112);
+    --color-base-70: #65707d;
+    --color-base-100: #b5a4a4;
+  }
+
+
 
   /* ----- spring theme ----- */
 
@@ -2267,7 +2370,8 @@ border-radius: 0px;
     --nav-collapse-icon-color: var(--text-normal);
     --nav-collapse-icon-color-collapsed: var(--text-normal);
 }
-.folder-rainbow-backgrounds.theme-crystal .nav-folder-title {
+.folder-rainbow-backgrounds.theme-crystal .nav-folder-title,
+.folder-rainbow-backgrounds.theme-ash-old .nav-folder-title {
     background-color: rgba(var(--rainbow-folder-color), 0.13);
     border: 0.25px solid rgb(var(--rainbow-folder-color));
     margin-bottom: 5px;
@@ -2787,6 +2891,9 @@ settings:
             -
                 label: Ash
                 value: theme-crystal
+            -
+                label: Ash (old)
+                value: theme-ash-old
             -
                 label: Anytype
                 value: theme-anytype
