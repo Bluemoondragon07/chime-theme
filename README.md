@@ -1,6 +1,6 @@
 # 🔔 Chime
 
-![](Macaroon.png)
+![](Screenshots/Simple Customizable Fun!.png)
 
 Chime was designed with a special intention to not overwhelm you with options. Built on the principle of highly customizable simplicity, **Chime** provides vast personalization options without going past only what's most important.
 
