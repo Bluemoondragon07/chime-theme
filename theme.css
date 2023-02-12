@@ -171,9 +171,11 @@ body.classic-layout {
 .workspace-ribbon {
     border-right: var(--divider-width) var(--line-style) var(--divider-color);    
 }
-body {
-    border-right-style: var(--line-style);
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+  border-right-style: var(--line-style);
 }
+
 /* --- floating titlebar --- */
 .view-header-title {
     font-size: 14px;
