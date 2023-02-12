@@ -609,7 +609,10 @@ display: inline;
     position: relative;
     font-style: normal;
 }
-.blockquote-sleek .markdown-rendered blockquote {
+.blockquote-sleek .markdown-rendered blockquote:not(.blockquote-floating),
+.blockquote-sleek .markdown-rendered blockquote:not(.blockquote-minimal),
+.blockquote-sleek .markdown-rendered blockquote:not(.blockquote-block),
+.blockquote-sleek .markdown-rendered blockquote:not(.blockquote-normal) {
     border: 1px solid;
     border-color: var(--background-modifier-border) !important;
     border-left-width: 6px;
