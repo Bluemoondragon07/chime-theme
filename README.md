@@ -1,14 +1,17 @@
 # 🔔 Chime
 
 ![](Macaroon.png)
-Chime was designed with a special intention to not overwhelm you with options. Customization options are given for various components without going past only what's most important.
+
+Chime was designed with a special intention to not overwhelm you with options. Built on the principle of highly customizable simplicity, **Chime** provides vast personalization options without going past only what's most important.
+
 # Features (Style Settings plug-in)
-- 12 different color schemes
-- Two different layout styles.
+- 12 different **color schemes**
+- Two different **layout styles.**
 - Hide certain buttons and enable full-screen **Focus Mode**
-- Special settings for the page-gallery plug-in
-- Options for styling blockquotes, headings, checkboxes, links, and more.  
-# CSS Classes
+- Special style settings for the **page-gallery plug-in**
+- Options for styling **blockquotes, headings, checkboxes, links,** and *more*.  
+
+## CSS Classes
 Chime includes four css classes that may come in handy to some people. 
 ### Wiki-page Class
 Format your note like a wiki page. This class floats images and info blockquotes to the right and formats headings and text. To use, type `cssClasses: wiki-page` in a note's frontmatter.
