@@ -52,8 +52,8 @@ A special thanks to...
   - rainbow folders option
 - The developers of *Obsidian*.
   - I wouldn't have learned CSS without this app.
-# 📋 To-Do
-- [x] update README
-- [x] Add header bottom border option
-- [x] Add custom link and tag options
- 
+
+# 💬 Want to Contribute to Chime?
+Feel free to make a [pull request](https://github.com/Bluemoondragon07/chime-theme/pulls) to add a new color scheme, layout variant...you name it. I am open to merging any style settings options that you come up with.
+
+*You* control the future of **Chime.**
