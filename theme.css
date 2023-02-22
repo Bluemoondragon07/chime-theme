@@ -97,14 +97,12 @@ body {
     --ribbon-background: transparent !important;
     --border-width: 0px !important;
 }
-
 .theme-light.background-image .workspace-ribbon.mod-left:before, .theme-light.background-image .side-dock-actions, .theme-light.background-image .side-dock-settings  {
 backdrop-filter: brightness(107%) blur(var(--bg-blur));
 }
 .theme-dark.background-image .workspace-ribbon.mod-left:before, .theme-dark.background-image .side-dock-actions, .theme-dark.background-image .side-dock-settings  {
     backdrop-filter: brightness(50%) blur(var(--bg-blur));
 }
-
 .background-image .side-dock-actions, .background-image .side-dock-settings  {
 margin-right: -4px;
 margin-left: -4px;
@@ -118,7 +116,6 @@ margin-top: -4px;
 padding-top: 505px;
 padding-bottom: 4px;
 }
-
 .theme-light.background-image .workspace-split {
     background: transparent !important;
     backdrop-filter: brightness(107%) blur(var(--bg-blur));
@@ -652,6 +649,7 @@ body{
     position: relative;
     border-left-width: 5px;
     padding-left: 15px;
+    padding-right: 15px;
 }
 .markdown-rendered blockquote p, .blockquote-normal .markdown-rendered blockquote p {
 display: inline;
@@ -1888,6 +1886,8 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --color-base-100: #8a9a9c;
 }
 
+
+
 /* ----- gruvbox theme ----- */
 .theme-gruvbox {
     --font-default: 'Hind', sans-serif;
@@ -2035,9 +2035,9 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
 }
 
 .theme-anytype {
-    --accent-h: 206 !important;
-    --accent-s: 78% !important;
-    --accent-l: 64% !important;
+    --accent-h: 45 !important;
+    --accent-s: 100% !important;
+    --accent-l: 50% !important;
     --callout-title-color: var(--text-normal);
     --callout-quote: 216, 216, 216;
     --callout-radius: 5px;
@@ -2117,6 +2117,103 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --color-base-70: #aeaba6;
     --color-base-100: #ffffff;
 }
+
+/* --------- chinchilla theme --------- */
+
+/* ------ light mode ------ */
+.theme-chinchilla.theme-light {
+    --color-base-00: white;
+    --color-base-05: rgb(251, 251, 251);
+    --color-base-10: #f6f6f6;
+    --color-base-20: #fbfbfb;
+    --color-base-25: #f8f8f8;
+    --color-base-30: #f1f1f1;
+    --color-base-35: #e7e7e7;
+    --color-base-40: #e1e1e1;
+    --color-base-50: #aeaeae;
+    --color-base-60: #a3a3a3;
+    --color-base-70: #888888;
+    --color-base-100: #000000;
+}
+.theme-chinchilla {
+        --accent-h: 184 !important;
+        --accent-s: 46% !important;
+        --accent-l: 66% !important;
+        --color-red-rgb: 245, 167, 167;
+        --color-red: #f5a7a7;
+        --color-green-rgb: 150, 207, 173;
+        --color-green: #96cfad;
+        --color-orange-rgb: 224, 189, 155;
+        --color-orange: #e0bd9b;
+        --color-yellow-rgb:219, 209, 176;
+        --color-yellow: #dbd1b0;
+        --color-cyan-rgb: 166, 199, 199;
+        --color-cyan: #a6c7c7;
+        --color-blue-rgb: 147, 177, 210;
+        --color-blue: #93b1d2;
+        --color-purple-rgb:175, 158, 228;
+        --color-purple: #af9ee4;
+        --color-pink-rgb: 213, 139, 175;
+        --color-pink: #d58baf;
+    }
+    
+    /* ------ dark mode ------ */
+    
+    .theme-chinchilla.theme-dark {
+    
+    /* Base Colors */
+    /* replace these with the main colors of your theme */
+        --color-base-00: #5b5b5b;
+        --color-base-10: #515151;
+        --color-base-20: #4f4f4f;
+        --color-base-25: #4d4d4d;
+        --color-base-30: #676767;
+        --color-base-35: #414141;
+        --color-base-40: #3d3d3d;
+        --color-base-50: #a4a4a4;
+        --color-base-60: rgb(156, 156, 156);
+        --color-base-70: #a1a1a1;
+        --color-base-100: rgb(255, 255, 255);
+
+    }
+    
+    /* ------ classes ------ */
+    
+    /* ---- colorful headings ---- */
+    
+    /* -- normal -- */
+.theme-chinchilla.colorful-headings {
+    --h1-color: rgb(115, 195, 195);
+    --h2-color: rgb(145, 214, 214);
+    --h3-color: rgb(149, 217, 209);
+    --h4-color: rgb(162, 213, 202);
+    --h5-color: rgb(171, 218, 203);
+    --h6-color: rgb(188, 214, 201);
+}
+
+    /* -- alternate -- */
+.theme-chinchilla.colorful-headings-alt {
+    --h1-color: var(--color-blue);
+    --h2-color: var(--color-cyan);
+    --h3-color: var(--color-green);
+    --h4-color: var(--color-yellow);
+    --h5-color: var(--color-orange);
+    --h6-color: var(--color-red);
+}
+    
+/* ---- colorful bold and italic ---- */
+.theme-chinchilla.colored-bold-and-italic {
+    --bold-color: var(--color-blue);
+    --italic-color: var(--color-purple);
+}
+
+/* ------ typography ------ */
+
+.theme-chinchilla {
+--font-default: 'Avenir Next', 'Roboto', sans-serif;
+}
+    
+    
 
 /* ----- celestial theme ----- */
 
@@ -2465,9 +2562,11 @@ border-radius: 0px;
     --color-purple-rgb: 144, 101, 176;
     --color-purple: #9065B0;
     --color-pink-rgb: 193, 76, 138;
-    --color-pink:  #C14C8A;  
-   
+    --color-pink:  #C14C8A;    
 }
+
+
+
 
 /* ---------- rainbow folders ---------- */
 /* -------- original rainbow folders by Lithou -------- */
@@ -2486,6 +2585,7 @@ border-radius: 0px;
     --nav-collapse-icon-color: var(--text-normal);
     --nav-collapse-icon-color-collapsed: var(--text-normal);
 }
+
 .folder-rainbow-backgrounds.theme-crystal .nav-folder-title,
 .folder-rainbow-backgrounds.theme-ash-old .nav-folder-title {
     background-color: rgba(var(--rainbow-folder-color), 0.13);
@@ -2495,8 +2595,6 @@ border-radius: 0px;
     --nav-collapse-icon-color: rgb(var(--rainbow-folder-color));
     --nav-collapse-icon-color-collapsed:rgb(var(--rainbow-folder-color));
 }
-
-
 
 .nav-folder-children > .nav-folder:nth-child(8n+2) {
     --rainbow-folder-color: var(--color-red-rgb);
@@ -3038,6 +3136,9 @@ settings:
             -
                 label: Celestial
                 value: theme-celestial
+            -
+                label: Chinchilla
+                value: theme-chinchilla
             -
                 label: Spring
                 value: theme-spring
