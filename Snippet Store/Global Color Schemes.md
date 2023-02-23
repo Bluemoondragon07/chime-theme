@@ -1,8 +1,6 @@
 # Global Color Schemes
 This snippet contains all the color schemes for **Chime**. As a snippet, it can be used with any theme you have installed (Note: inevitably, this snippet only has a full effect on *certain themes*).
-Great if you want to mix your favourite theme's UI with your favourite colors.
-
-As with every snipppet, copy this into a `.css` file in `.obsidian/snippets/` to use.
+Great if you want to shake up your favourite theme with some extra colors. 
 
 ```css
 
