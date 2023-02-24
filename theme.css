@@ -224,6 +224,14 @@ body.classic-layout {
     color: var(--text-faint);
 }
 
+/* --- window control buttons --- */
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+    background-color: #3a2e2000;
+}
+.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+    background-color: #3a2e2000;
+}
+
 /* --- prompts ---*/
 body {
     --prompt-width: 450px;
