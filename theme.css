@@ -225,11 +225,12 @@ body.classic-layout {
 }
 
 /* --- window control buttons --- */
-.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
-    background-color: #3a2e2000;
-}
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right,
 .is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
     background-color: #3a2e2000;
+}
+.is-focused .titlebar-inner, .titlebar-inner{
+    color: var(--icon-color);
 }
 
 /* --- prompts ---*/
