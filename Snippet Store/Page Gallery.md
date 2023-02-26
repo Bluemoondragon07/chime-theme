@@ -2,7 +2,11 @@
 Use Chime's page gallery style with any theme.
 
 ```css
-/* ---------- page gallery plug-in ---------- */
+/* ---------- chime page gallery snippet ---------- */
+
+body {
+--tile-radius: 6px;
+}
 
 .responsive-tile-height .page-gallery__field,
 .flex-tiles .page-gallery__field {
@@ -42,7 +46,7 @@ Use Chime's page gallery style with any theme.
 }
 .page-gallery__image {
     opacity: 100%;
-    border-radius: var(--radius-s) var(--radius-s) 0px 0px !important;
+    border-radius: var(--tile-radius) var(--tile-radius) 0px 0px !important;
     box-shadow: none;
     width: 100%;
     background-size: cover;
@@ -102,4 +106,30 @@ flex-grow: 1;
     font-weight: var(--h2-weight);
   }
 
+/* @settings
+
+name: 
+id: chime-theme
+settings:
+    -
+        id: responsive-tile-height
+        title: Responsive Tile Height
+        type: class-toggle
+        default: true
+        description: Make text break and continue on the next line rather than overflowing. Tile heights will change to accommodate the whole text.
+    -
+        id: flex-tiles
+        title: Loose Tiles
+        description: Make the tiles resize and rearrange themselves depending on the size of their content. This gets rid of the rigid columnar layout.
+        type: class-toggle
+        default: false
+    -
+        id: tile-radius
+        title: Tile Border Radius
+        description: Control the roundness of the tiles.
+        type: variable-number-slider
+        default: 6
+        min: 0
+        max: 40
+        format: px
 ```
