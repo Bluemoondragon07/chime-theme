@@ -108,8 +108,8 @@ flex-grow: 1;
 
 /* @settings
 
-name: 
-id: chime-theme
+name: Page Gallery
+id: page-gallery
 settings:
     -
         id: responsive-tile-height
