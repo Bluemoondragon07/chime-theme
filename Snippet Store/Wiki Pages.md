@@ -5,7 +5,7 @@ Use the `wiki-page` css class with any theme with this snippet.
 
 /* --- wiki-page (wiki page) css class --- */
 .wiki-page {
-    --file-line-width: 100%;
+    --file-line-width: 100% !important;
     --font-text-size: 0.9em; 
     --h1-color: var(--text-normal);    
     --h2-color: var(--text-normal);    
@@ -24,8 +24,6 @@ Use the `wiki-page` css class with any theme with this snippet.
     --h1-font: 'Linux Libertine', 'Georgia', 'Times', serif;
     --h1-weight: normal;
     --inline-title-color: var(--text-normal);
-    --radius-s: 0px;
-    --radius-m: 0px;
 }
 
 .wiki-page.markdown-rendered hr::before, .wiki-page.markdown-source-view hr::before{
@@ -86,7 +84,6 @@ Use the `wiki-page` css class with any theme with this snippet.
     text-align: left;
     overflow: hidden;
     margin: 1em 1em 1em 0px;
-    border-radius: var(--radius-s);
 }
 
 
@@ -94,40 +91,18 @@ Use the `wiki-page` css class with any theme with this snippet.
 .wiki-page.markdown-preview-view .callout[data-callout*=info] {
     float: right;
     clear: right;
-    width: 25%;
-    background-color: var(--background-primary);
-    padding: 0px;
-    border-radius: var(--radius-s);
-    box-shadow: var(--shadow-s);
-    border: 1px solid var(--background-modifier-border);
+    width: 25% !important;
+     max-width: 25%;
+     min-width: 25%;
 }
 .wiki-page.markdown-source-view .callout[data-callout*=info] {
     width: 25%;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--blockquote-background-color);
-    padding: 7px;
-    border-radius: var(--radius-s);
-    border: 1px solid var(--background-modifier-border);
 }
 
-.wiki-page.markdown-preview-view .callout[data-callout*=info] .callout-content {
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding:5px;
 
-}
-.wiki-page.markdown-preview-view .callout[data-callout*=info] .callout-title {
-    font-size: var(--h3-size);
-    font-weight: var(--h3-weight);
-    color: var(--text-normal);
-    padding: 5px;
-    background-color: rgba(var(--color-yellow-rgb), 0.2);
-    width: 100%;
-    margin: 0px;
-}
+
 .wiki-page .callout h1,
 .wiki-page .callout h2,
 .wiki-page .callout h3,
@@ -157,10 +132,6 @@ Use the `wiki-page` css class with any theme with this snippet.
     margin: 1em;
 }
 
-.wiki-page.markdown-preview-view .callout-title {
-    width: fit-content;
-    font-size: var(--h3-size);
-}
 .wiki-page hr {
     border-width: 1px;
     overflow: hidden;
