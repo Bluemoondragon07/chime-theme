@@ -1,5 +1,6 @@
 # Chime-Style Page Gallery
 > Includes Style Settings
+
 Use Chime's page gallery style with any theme.
 
 ```css
