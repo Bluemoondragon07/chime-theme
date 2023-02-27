@@ -29,23 +29,20 @@ Use the `wiki-page` css class with any theme with this snippet.
 .wiki-page.markdown-rendered hr::before, .wiki-page.markdown-source-view hr::before{
     display: none !important;
 }
-.wiki-page .inline-title {
-    border-bottom: 1px solid var(--background-modifier-border) !important;
-    line-height: 0.5em;
-    margin-bottom: 1em;
-    font-family: var(--h1-font);
-    font-weight: var(--h1-weight);
-}
+
 
 
 .wiki-page .frontmatter-container {
     display: none;
 }
-.wiki-page h1{
+.wiki-page h1, .inline-title {
     border-bottom: 1px solid var(--background-modifier-border) !important;
     background-color: transparent !important;
     padding: 0px !important;
     overflow: hidden;
+    text-align: left;
+    font-family: var(--h1-font); 
+    font-weight: var(--h1-weight);
 }
 .wiki-page h2,
 .wiki-page h3,
@@ -56,6 +53,7 @@ Use the `wiki-page` css class with any theme with this snippet.
     padding: 0px !important;
     overflow: hidden;
     border-bottom: none !important
+    text-align: left;
 }
 .wiki-page img {
     width: 25% !important;
@@ -149,5 +147,6 @@ Use the `wiki-page` css class with any theme with this snippet.
 .wiki-page .dataview.inline-field-key {
     font-size: inherit;
 }
+
 
 ```
