@@ -57,7 +57,7 @@ body {
 }
 .page-gallery__fallback {
 box-shadow: none;
-border-radius: var(--radius-s) var(--radius-s) 0px 0px;
+border-radius: var(--tile-radius) var(--tile-radius) 0px 0px;
 background: var(--background-secondary-alt);
 
 }
@@ -72,7 +72,7 @@ background: var(--background-secondary-alt);
 .page-gallery__tile {
     max-width: 100%;
     border: 1px var(--line-style) var(--background-modifier-border);
-    border-radius: var(--radius-s);
+    border-radius: var(--tile-radius);
     display: flex;
     flex-direction: column;
     box-shadow: var(--shadow-s);
@@ -132,4 +132,5 @@ settings:
         min: 0
         max: 40
         format: px
+*/
 ```
