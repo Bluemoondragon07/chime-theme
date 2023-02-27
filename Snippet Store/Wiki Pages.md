@@ -38,7 +38,6 @@ Use the `wiki-page` css class with any theme with this snippet.
 .wiki-page h1, .wiki-page .inline-title {
     border-bottom: 1px solid var(--background-modifier-border) !important;
     background-color: transparent !important;
-    padding: 0px !important;
     overflow: hidden;
     text-align: left;
     font-family: var(--h1-font); 
