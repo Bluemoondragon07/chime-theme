@@ -2,25 +2,9 @@
 /* ----- by: Ha'ani Whitlock ----- */
 
 /* ---------- fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arima&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Libre+Baskerville&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Arima:wght@100;200;300;400;500;600;700&family=Averia+Gruesa+Libre&family=Comfortaa:wght@300;400;500;600;700&family=Courgette&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Forum&family=Handlee&family=Hind:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Merienda:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* -- custom font -- */
 .custom-font-toggle {
@@ -169,7 +153,8 @@ body.classic-layout, .is-mobile {
 
 
 /* --- sidebars --- */
-body, body.theme-crystal.classic-layout {
+body, body.theme-crystal.classic-layout,
+body.theme-ash-old.classic-layout{
     --ribbon-background-collapsed: transparent;
 }
 body.classic-layout {
@@ -232,6 +217,7 @@ body.classic-layout {
 .is-focused .titlebar-inner, .titlebar-inner{
     color: var(--icon-color);
 }
+
 
 /* --- prompts ---*/
 body {
@@ -841,7 +827,8 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
     --h5-color: var(--color-blue);
     --h6-color: var(--color-purple);
 }
-.colorful-headings.theme-dark.theme-crystal {
+.colorful-headings.theme-dark.theme-crystal, 
+.colorful-headings.theme-dark.theme-ash-old {
     --h6-color: rgb(91, 117, 161);
     --h5-color: rgb(140, 132, 190);
     --h4-color: rgb(154, 118, 168);
@@ -849,7 +836,8 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
     --h2-color: rgb(203, 120, 132);
     --h1-color: rgb(208, 92, 92); 
 }
-.colorful-headings.theme-light.theme-crystal {
+.colorful-headings.theme-light.theme-crystal,
+.colorful-headings.theme-light.theme-ash-old {
     --h1-color: rgb(91, 117, 161);
     --h2-color: rgb(140, 132, 190);
     --h3-color: rgb(154, 118, 168);
@@ -1106,6 +1094,7 @@ body, .theme-default {
     --color-base-60: rgb(103, 129, 148);
     --color-base-70: #7f83a1;
     --color-base-100: #a0a7c4;
+    --background-secondary-alt: var(--color-base-20);
   }
 
   /* ----- Ash Theme ----- */
@@ -1422,7 +1411,7 @@ body, .theme-default {
 
   /* ----- novelist theme + novel css class ----- */
   .theme-novelist {
-    --font-default: 'Libre Baskerville', Georgia, 'Baskerville Old Face', 'Book Antiqua', sans-serif;
+    --font-default: Georgia, 'Libre Baskerville', 'Baskerville Old Face', 'Book Antiqua', sans-serif;
   }
   .novel {
     --font-text: 'Libre Baskerville', Georgia, 'Baskerville Old Face', 'Book Antiqua', Alice, 'EB Garamond', sans-serif !important;
@@ -1640,10 +1629,10 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --color-purple: #5e81AC;
     --color-pink-rgb: 180, 142, 173;
     --color-pink: #b48ead;
-    --color-base-00: #2E3440; 
+    --color-base-00: hsl(220, 16%, 22%); 
     /* --color-base-00:  #3B4252; */
-    --color-base-10: #383f4c;
-     --color-base-20: #3B4252; 
+    --color-base-10: hsl(220, 16.8%, 25%);
+     --color-base-20: hsl(222, 16%, 28%); 
     /*--color-base-20:  #2E3440; */
     --color-base-25: #474e5f;
     --color-base-30: #434C5E;
