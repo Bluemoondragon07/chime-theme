@@ -1034,6 +1034,9 @@ body, .theme-default {
 }
 
 .theme-light, .theme-default.theme-light {
+    --accent-h: 323;
+    --accent-s: 30%;
+    --accent-l: 65%;
     color-scheme: light;
     --highlight-mix-blend-mode: darken;
     --mono-rgb-0: 255, 255, 255;
@@ -1054,10 +1057,10 @@ body, .theme-default {
     --color-purple: #b584c7;
     --color-pink-rgb: 220, 118, 167;
     --color-pink: #dc76a7;
-    --color-base-00: #fffdf8;
+    --color-base-00: #f8f3f2;
     --color-base-05: #faf3f1;
     --color-base-10: #f0e9e4;
-    --color-base-20: #e7d8d8;
+    --color-base-20: #f4ebeb;
     --color-base-25: #d9c9ca;
     --color-base-30: #cec2c577;
     --color-base-35: #b5a7ac;
@@ -2103,7 +2106,7 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --color-base-60: #7b7b7b;
     --color-base-70: #999999;
     --color-base-100: #2f2f2f;
-  }++++++++
+  }
   .theme-anytype.theme-dark {
     color-scheme: dark;
     --background-modifier-border: #323130;
@@ -2125,39 +2128,39 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
 
 /* ------ light mode ------ */
 .theme-chinchilla.theme-light {
-    --color-base-00: white;
-    --color-base-05: rgb(251, 251, 251);
-    --color-base-10: #f6f6f6;
-    --color-base-20: #fbfbfb;
-    --color-base-25: #f8f8f8;
-    --color-base-30: #f1f1f1;
-    --color-base-35: #e7e7e7;
-    --color-base-40: #e1e1e1;
-    --color-base-50: #aeaeae;
-    --color-base-60: #a3a3a3;
-    --color-base-70: #888888;
+    --color-base-00: rgb(242, 243, 244);
+    --color-base-05: rgb(236, 237, 239);
+    --color-base-10: rgb(227, 229, 233);
+    --color-base-20: rgb(236, 237, 239);
+    --color-base-25: rgb(221, 224, 228);
+    --color-base-30: rgb(221, 223, 229);
+    --color-base-35: rgb(219, 222, 227);
+    --color-base-40: rgb(198, 204, 211);
+    --color-base-50: rgb(173, 180, 190);
+    --color-base-60: rgb(166, 172, 182);
+    --color-base-70: rgb(129, 135, 146);
     --color-base-100: #000000;
 }
 .theme-chinchilla {
         --accent-h: 184 !important;
-        --accent-s: 46% !important;
-        --accent-l: 66% !important;
+        --accent-s: 33% !important;
+        --accent-l: 60% !important;
         --color-red-rgb: 245, 167, 167;
-        --color-red: #f5a7a7;
+        --color-red: #b15e5e;
         --color-green-rgb: 150, 207, 173;
-        --color-green: #96cfad;
+        --color-green: #699c7d;
         --color-orange-rgb: 224, 189, 155;
-        --color-orange: #e0bd9b;
+        --color-orange: #b39373;
         --color-yellow-rgb:219, 209, 176;
-        --color-yellow: #dbd1b0;
+        --color-yellow: #cdbd8a;
         --color-cyan-rgb: 166, 199, 199;
-        --color-cyan: #a6c7c7;
+        --color-cyan: #83a5a5;
         --color-blue-rgb: 147, 177, 210;
-        --color-blue: #93b1d2;
+        --color-blue: #7290af;
         --color-purple-rgb:175, 158, 228;
-        --color-purple: #af9ee4;
+        --color-purple: #8573ba;
         --color-pink-rgb: 213, 139, 175;
-        --color-pink: #d58baf;
+        --color-pink: #a86384;
     }
     
     /* ------ dark mode ------ */
@@ -2165,17 +2168,16 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     .theme-chinchilla.theme-dark {
     
     /* Base Colors */
-    /* replace these with the main colors of your theme */
-        --color-base-00: #5b5b5b;
-        --color-base-10: #515151;
-        --color-base-20: #4f4f4f;
-        --color-base-25: #4d4d4d;
-        --color-base-30: #676767;
-        --color-base-35: #414141;
-        --color-base-40: #3d3d3d;
+        --color-base-00: #676b6d;
+        --color-base-10: #6e7375;
+        --color-base-20: #5b5f60;
+        --color-base-25: #767b7d;
+        --color-base-30: #7e8486;
+        --color-base-35: #7f8486;
+        --color-base-40: #919799;
         --color-base-50: #a4a4a4;
-        --color-base-60: rgb(156, 156, 156);
-        --color-base-70: #a1a1a1;
+        --color-base-60: rgb(176, 176, 176);
+        --color-base-70: #c1c1c1;
         --color-base-100: rgb(255, 255, 255);
 
     }
@@ -3221,23 +3223,6 @@ settings:
                 label: outset
                 value: line-style-outset
     -
-        id: folder-color-options
-        title: Folder Colors
-        description: Enable or disable rainbow folders (original rainbow folders created by Lithou)
-        type: class-select
-        allowEmpty: false
-        default: folder-default
-        options:
-            -
-                label: Default
-                value: folder-default
-            -
-                label: Rainbow Folder Titles
-                value: folder-rainbow-titles
-            -
-                label: Rainbow Folder Backgrounds
-                value: folder-rainbow-backgrounds
-    -
         id: border-width
         title: Border Width
         type: variable-number-slider
@@ -3256,6 +3241,67 @@ settings:
         max: 30
         step: 1
         format: px
+    -
+        id: editor-heading
+        title: Editor
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: file-line-width
+        title: Readable Line Length
+        description: Change the width of the note when Readable Line Length is turned on.
+        type: variable-text
+        default: '700px'
+    -
+        id: folders-heading
+        title: Folders
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: folder-color-options
+        title: Folder Colors
+        description: Enable or disable rainbow folders (original rainbow folders created by Lithou)
+        type: class-select
+        allowEmpty: false
+        default: folder-default
+        options:
+            -
+                label: Default
+                value: folder-default
+            -
+                label: Rainbow Folder Titles
+                value: folder-rainbow-titles
+            -
+                label: Rainbow Folder Backgrounds
+                value: folder-rainbow-backgrounds
+    -
+        id: tabs-heading
+        title: Tabs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tab-text-color-focused-active-current
+        title: Active Tab Color
+        description: Change the text color of the active tab.
+        type: variable-select
+        default: var(--text-accent)
+        options: 
+            -
+                label: Accent Color
+                value: var(--text-accent)
+            -
+                label: Muted
+                value: var(--text-muted)
+            -
+                label: Faint
+                value: var(--text-faint)
+            -
+                label: Normal
+                value: var(--text-normal)
+
     -
         id: workspace-options
         title: Background Image
@@ -3456,6 +3502,55 @@ settings:
             -
                 label: Button
                 value: link-button  
+    -
+        id: code-heading
+        title: Code
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: code-normal
+        title: Inline Code Color
+        type: variable-select
+        default: var(--text-muted)
+        options:
+            -
+                label: Muted
+                value: var(--text-muted)
+            -
+                label: Normal
+                value: var(--text-normal)
+            -
+                label: Red
+                value: var(--color-red)
+            -
+                label: Accent
+                value: var(--text-accent)
+    -
+        id: code-background
+        title: Code background
+        type: variable-select
+        default: var(--background-primary-alt)
+        options: 
+            -
+                label: Default
+                value: var(--background-primary-alt)
+            -
+                label: Background Primary
+                value: var(--background-primary)
+            -
+                label: Background Secondary
+                value: var(--background-secondary)
+            -
+                label: Background Secondary Alt
+                value: var(--background-secondary-alt)
+            -   
+                label: Transparent
+                value: transparent
+            -
+                label: Accent
+                value: hsla(var(--color-accent-hsl), 0.1)
+
     -
         id: headings-settings
         title: Headings
