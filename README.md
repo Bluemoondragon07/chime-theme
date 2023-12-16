@@ -4,17 +4,17 @@
 
 Chime was designed with a special intention to not overwhelm you with options. Built on the principle of highly customizable simplicity, **Chime** provides vast personalization options without going past only what's most important.
 
-# Features 
+# Features
 With the Style Settings plug-in, **Chime** boasts the following features:
 - 12 different **color schemes**
 - Two different **layout styles.**
 - Hide certain buttons and enable full-screen **Focus Mode**
 - Special style settings for the **page-gallery plug-in**
-- Options for styling **blockquotes, headings, checkboxes, links,** and *more*.  
+- Options for styling **blockquotes, headings, checkboxes, links,** and *more*.
 - Four special css classes
 
 # CSS Classes
-Chime includes four css classes that may come in handy to some people. 
+Chime includes four css classes that may come in handy to some people.
 
 | Image| Class | Description |
 |--------------------|-----------|---------------------|
