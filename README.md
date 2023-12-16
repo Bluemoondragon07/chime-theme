@@ -5,7 +5,9 @@
 Chime was designed with a special intention to not overwhelm you with options. Built on the principle of highly customizable simplicity, **Chime** provides vast personalization options without going past only what's most important.
 
 # Features
+
 With the Style Settings plug-in, **Chime** boasts the following features:
+
 - 12 different **color schemes**
 - Two different **layout styles.**
 - Hide certain buttons and enable full-screen **Focus Mode**
@@ -14,6 +16,7 @@ With the Style Settings plug-in, **Chime** boasts the following features:
 - Four special css classes
 
 # CSS Classes
+
 Chime includes four css classes that may come in handy to some people.
 
 | Image| Class | Description |
@@ -23,19 +26,22 @@ Chime includes four css classes that may come in handy to some people.
 |![](wide.png)| `wide` | Makes a note wide even when Readable Line Length is turned on. |
 |![](cards.png)| `cards` (by [kepano](https://github.com/kepano)) | <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy kepano a coffee&emoji=&slug=kepano&button_colour=6a8695&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a> <br> <br> Makes dataview tables show up as a grid of cards. Originally created by kepano for the Minimal theme. |
 
-
 # 🔌 Compatible Plug-Ins
+
 ## Dataview
+
 **Chime** includes styling for inline metadata and dataview tables. The `cards` class also utilizes this plug-in.
 
 ## Pages Gallery
+
 Chime makes minor changes to the **Pages Gallery** plug-in and gives it an appearance similar to that of the cards css class. Text will now break and continue on a new line rather than overflowing when *responsive height* is enabled, and the tiles will be resized according to amount of text with the *loose tiles* setting. Images will be automatically set to *cover* and will override *contain* (this may change later, I just couldn't get the images to force certain ratios in contain mode). The font size within the tiles has been adjusted and a style setting has been added to get rid of the searchbar.
 
 ![](Screenshots/page-gallery.png)
 
-
 # 💖 Credits
+
 A special thanks to...
+
 - kepano for their amazing Minimal theme
   - Inspiration
   - cards CSS class
@@ -45,6 +51,7 @@ A special thanks to...
   - I wouldn't have learned CSS without this app.
 
 # 💬 Want to Contribute to Chime?
+
 Feel free to make a [pull request](https://github.com/Bluemoondragon07/chime-theme/pulls) to add a new color scheme, layout variant...you name it. I am open to merging any style settings options that you come up with.
 
 *You* control the future of **Chime.**
