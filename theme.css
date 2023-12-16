@@ -197,7 +197,7 @@ body.classic-layout {
 }
 /* --- make line style effect sidebar --- */
 .workspace-ribbon {
-    border-right: var(--divider-width) var(--line-style) var(--divider-color);    
+    border-right: var(--divider-width) var(--line-style) var(--divider-color);
 }
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
@@ -207,7 +207,7 @@ body.classic-layout {
 /* --- floating titlebar --- */
 .view-header-title {
     font-size: 14px;
-    
+
 }
 .view-header-breadcrumb {
     color: var(--text-faint);
@@ -307,14 +307,14 @@ thead {
 /* --- wiki-page (wiki page) css class --- */
 .wiki-page {
     --file-line-width: 100%;
-    --font-text-size: 0.9em; 
-    --h1-color: var(--text-normal);    
-    --h2-color: var(--text-normal);    
-    --h3-color: var(--text-normal);    
-    --h4-color: var(--text-normal);    
-    --h5-color: var(--text-normal);    
-    --h6-color: var(--text-normal);   
-    --h1-size: 1.5em; 
+    --font-text-size: 0.9em;
+    --h1-color: var(--text-normal);
+    --h2-color: var(--text-normal);
+    --h3-color: var(--text-normal);
+    --h4-color: var(--text-normal);
+    --h5-color: var(--text-normal);
+    --h6-color: var(--text-normal);
+    --h1-size: 1.5em;
     --h2-size: 1.2em;
     --h3-size: 1.1em;
     --h4-size: 1em;
@@ -666,7 +666,7 @@ display: inline;
     border-radius: var(--radius-s);
     border-left: none;
     font-style: normal;
-    
+
 }
 .blockquote-quote .markdown-rendered blockquote {
     background-color: transparent;
@@ -765,7 +765,7 @@ font-weight: 300;
     content: ':';
     margin-left: 0px;
     margin-right: 5px;
-    
+
 }
 .dataview.inline-field-value {
     background-color: transparent;
@@ -2012,7 +2012,7 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --h4-color: var(--color-yellow);
     --h5-color: var(--color-orange);
     --h6-color: var(--color-red);
-    
+
 
 }
 .theme-anytype.colorful-headings h1, .theme-anytype.colorful-headings .HyperMD-header-1 {
@@ -2162,11 +2162,11 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
         --color-pink-rgb: 213, 139, 175;
         --color-pink: #a86384;
     }
-    
+
     /* ------ dark mode ------ */
-    
+
     .theme-chinchilla.theme-dark {
-    
+
     /* Base Colors */
         --color-base-00: #676b6d;
         --color-base-10: #6e7375;
@@ -2181,11 +2181,11 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
         --color-base-100: rgb(255, 255, 255);
 
     }
-    
+
     /* ------ classes ------ */
-    
+
     /* ---- colorful headings ---- */
-    
+
     /* -- normal -- */
 .theme-chinchilla.colorful-headings {
     --h1-color: rgb(115, 195, 195);
@@ -2205,7 +2205,7 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
     --h5-color: var(--color-orange);
     --h6-color: var(--color-red);
 }
-    
+
 /* ---- colorful bold and italic ---- */
 .theme-chinchilla.colored-bold-and-italic {
     --bold-color: var(--color-blue);
@@ -2217,8 +2217,8 @@ background-image: linear-gradient(rgb(244, 205, 11), rgb(216, 171, 57));
 .theme-chinchilla {
 --font-default: 'Avenir Next', 'Roboto', sans-serif;
 }
-    
-    
+
+
 
 /* ----- celestial theme ----- */
 
@@ -2567,7 +2567,7 @@ border-radius: 0px;
     --color-purple-rgb: 144, 101, 176;
     --color-purple: #9065B0;
     --color-pink-rgb: 193, 76, 138;
-    --color-pink:  #C14C8A;    
+    --color-pink:  #C14C8A;
 }
 
 
@@ -2642,7 +2642,7 @@ color: rgb(var(--rainbow-folder-color));
     --cards-background: var(--background-primary);
     --cards-border-width: var(--border-width);
  }
-  
+
   @media (max-width: 400pt) {
     :root {
       --cards-min-width:var(--cards-mobile-width); } }
@@ -2650,10 +2650,10 @@ color: rgb(var(--rainbow-folder-color));
   .cards.table-100 table.dataview tbody,
   .table-100 .cards table.dataview tbody {
     padding: 0.25rem 0.75rem; }
-  
+
   .cards .el-pre + .el-lang-dataview .table-view-thead {
     padding-top: 8px; }
-  
+
   .cards table.dataview tbody {
     clear: both;
     padding: 0.5rem 0;
@@ -2661,7 +2661,7 @@ color: rgb(var(--rainbow-folder-color));
     grid-template-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
     grid-column-gap: 0.3rem;
     grid-row-gap: 0.3rem; }
-  
+
   .cards table.dataview > tbody > tr {
     background-color: var(--cards-background);
     border: 1px var(--line-style) var(--background-modifier-border);
@@ -2672,17 +2672,17 @@ color: rgb(var(--rainbow-folder-color));
     border-radius: var(--radius-s);
     overflow: hidden;
     transition: box-shadow 0.15s linear; }
-  
+
   .cards table.dataview > tbody > tr:hover {
     border: var(--cards-border-width) var(--line-style) var(--background-modifier-border-hover);
     box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
     transition: box-shadow 0.15s linear; }
-  
+
   /* Styling elements inside cards */
   .markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
   .trim-cols .cards table.dataview tbody > tr > td {
     white-space: normal; }
-  
+
   .markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
   .cards table.dataview tbody > tr > td {
     border-bottom: none;
@@ -2693,85 +2693,85 @@ color: rgb(var(--rainbow-folder-color));
     overflow: visible !important;
     max-width: 100%;
     display: flex; }
-  
+
   .cards table.dataview tbody > tr > td .el-p {
     display: block;
     width: 100%; }
-  
+
   .cards table.dataview tbody > tr > td:first-child {
     font-weight: var(--bold-weight);
  }
-  
+
   .cards table.dataview tbody > tr > td:first-child a {
     padding: 0 0 calc(var(--cards-padding)/3);
     display: block; }
-  
+
   .cards table.dataview tbody > tr > td:not(:first-child) {
     font-size: 90%;
     color: var(--text-muted); }
-  
+
   @media (max-width: 400pt) {
     .cards table.dataview tbody > tr > td:not(:first-child) {
-      font-size: 80%; } 
+      font-size: 80%; }
     }
-  
+
   .cards-cols-1 table.dataview tbody {
     grid-template-columns: repeat(1, minmax(0, 1fr)); }
-  
+
   .cards-cols-2 table.dataview tbody {
     grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  
+
   @media (min-width: 400pt) {
     .cards-cols-3 table.dataview tbody {
       grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  
+
     .cards-cols-4 table.dataview tbody {
       grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  
+
     .cards-cols-5 table.dataview tbody {
       grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  
+
     .cards-cols-6 table.dataview tbody {
       grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  
+
     .cards-cols-7 table.dataview tbody {
       grid-template-columns: repeat(7, minmax(0, 1fr)); }
-  
+
     .cards-cols-8 table.dataview tbody {
       grid-template-columns: repeat(8, minmax(0, 1fr)); } }
   /* Card content */
   /* Paragraphs */
   .cards table.dataview tbody > tr > td > *:not(.el-embed-image) {
     padding: calc(var(--cards-padding)/3) 0; }
-  
+
   .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {
     border-bottom: 1px solid var(--background-modifier-border);
     width: 100%; }
-  
+
   /* Links */
   .cards table.dataview tbody > tr > td a {
     text-decoration: none; }
-  
+
   .links-int-on .cards table.dataview tbody > tr > td a {
     text-decoration: none; }
-  
+
   /* Buttons */
   .cards table.dataview tbody > tr > td > button {
     width: 100%;
     margin: calc(var(--cards-padding)/2) 0; }
-  
+
   .cards table.dataview tbody > tr > td:last-child > button {
     margin-bottom: calc(var(--cards-padding)/6); }
-  
+
   /* Lists */
   .cards table.dataview tbody > tr > td > ul {
     width: 100%;
     padding: 0.25em 0 !important;
     margin: 0 auto !important; }
-  
+
   .cards table.dataview tbody > tr > td:not(:last-child) > ul {
     border-bottom: 1px solid var(--background-modifier-border); }
-  
+
   /* Images */
   .cards table.dataview tbody > tr > td .el-embed-image {
     background-color: transparent;
@@ -2780,7 +2780,7 @@ color: rgb(var(--rainbow-folder-color));
     width: calc(100% + var(--cards-padding));
     border-radius: var(--radius-s);
  }
-  
+
   .cards table.dataview tbody > tr > td img {
     width: 100%;
     object-fit: var(--cards-image-fit);
@@ -2789,22 +2789,22 @@ color: rgb(var(--rainbow-folder-color));
     vertical-align: bottom;
     border-radius: var(--radius-s);
  }
-  
+
   /* ------------------- */
   /* Block button */
   .markdown-source-view.mod-cm6.cards .edit-block-button {
     top: 0px; }
-  
+
   /* ------------------- */
   /* Sorting */
   .cards.table-100 table.dataview thead > tr,
   .table-100 .cards table.dataview thead > tr {
     right: 0.75rem; }
-  
+
   .table-100 .cards table.dataview thead:before,
   .cards.table-100 table.dataview thead:before {
     margin-right: 0.75rem; }
-  
+
   .cards table.dataview thead {
     user-select: none;
     width: 180px;
@@ -2814,7 +2814,7 @@ color: rgb(var(--rainbow-folder-color));
     text-align: right;
     height: 24px;
     padding-bottom: 4px; }
-  
+
   .cards table.dataview thead:before {
     content: '';
     position: absolute;
@@ -2829,20 +2829,20 @@ color: rgb(var(--rainbow-folder-color));
     border-radius: 5px;
     font-weight: 500;
     font-size: var(--font-adaptive-small); }
-  
+
   .cards table.dataview thead:before {
     opacity: 0.25;
     background-position: center center;
     background-size: var(--icon-size);
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="white" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>'); }
-  
+
   .theme-light .cards table.dataview thead:before {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>'); }
-  
+
   .cards table.dataview thead:hover:before {
     opacity: 1;
    }
-  
+
   .cards table.dataview thead > tr {
     top: 0;
     position: absolute;
@@ -2856,10 +2856,10 @@ color: rgb(var(--rainbow-folder-color));
     flex-direction: column;
     margin: 26px 0 0 0;
     width: 100%; }
-  
+
   .cards table.dataview thead:hover > tr {
     display: flex; }
-  
+
   .cards table.dataview thead > tr > th {
     display: block;
     padding: 3px 30px 3px 6px !important;
@@ -2870,11 +2870,11 @@ color: rgb(var(--rainbow-folder-color));
     cursor: var(--cursor);
     border: none;
     font-size: var(--font-adaptive-small); }
-  
+
   .cards table.dataview thead > tr > th[sortable-style="sortable-asc"],
   .cards table.dataview thead > tr > th[sortable-style="sortable-desc"] {
     color: var(--text-normal); }
-  
+
   .cards table.dataview thead > tr > th:hover {
     color: var(--text-normal);
     background-color: var(--background-secondary); }
@@ -2968,7 +2968,7 @@ flex-grow: 1;
 }
 
 .theme-dark .page-gallery__tile {
-    background-color: var(--background-secondary);  
+    background-color: var(--background-secondary);
 }
 
 .page-gallery__group-title {
@@ -3168,8 +3168,8 @@ settings:
             -
                 label: Light & Bright
                 value: theme-light-and-bright
-            
-    - 
+
+    -
         id: ui-options
         title: Layout
         type: heading
@@ -3180,7 +3180,7 @@ settings:
         title: Hide Workspace Dividers
         type: class-toggle
 
-    - 
+    -
         id: cards-layout
         title: Cards Sidebar Layout
         description: Toggle a cards layout for sidebars. NOTE - will not have any effect if Classic Layout is turned on.
@@ -3198,10 +3198,10 @@ settings:
         allowEmpty: false
         default: line-style-solid
         options:
-            - 
+            -
                 label: Solid
                 value: line-style-solid
-            - 
+            -
                 label: Dashed
                 value: line-style-dashed
             -
@@ -3288,7 +3288,7 @@ settings:
         description: Change the text color of the active tab.
         type: variable-select
         default: var(--text-accent)
-        options: 
+        options:
             -
                 label: Accent Color
                 value: var(--text-accent)
@@ -3319,7 +3319,7 @@ settings:
         title: Custom Background Image
         type: variable-select
         default: Above the Clouds
-        options: 
+        options:
             -
                 label: Gradient 1
                 value: url(https://images.unsplash.com/photo-1554034483-04fda0d3507b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)
@@ -3350,14 +3350,14 @@ settings:
             -
                 label: Snowy Sunrise
                 value: url(https://images.unsplash.com/photo-1487349703519-90c8e4f426a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2906&q=80)
-            - 
+            -
                 label: Sakura Blossoms
                 value: url(https://images.unsplash.com/photo-1560719613-9f0bdc469ca2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80)
             -
                 label: Mountain Silhouette at Dusk
                 value: url(https://images.unsplash.com/photo-1509226704106-8a5a71ffbfa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)
             -
-                label: Neon City 
+                label: Neon City
                 value: url(https://images.unsplash.com/photo-1531931477284-7e16215c9540?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80)
     -
         id: bg-blur
@@ -3366,7 +3366,7 @@ settings:
         description: Apply a blurring effect to the background image. I recommend using higher values for dark mode.
         default: 0
         format: px
-    -      
+    -
         id: blockquote-options
         title: Blockquotes
         type: heading
@@ -3385,13 +3385,13 @@ settings:
             -
                 label: Simple Block
                 value: blockquote-block
-            - 
+            -
                 label: Obsidian
                 value: blockquote-quote
             -
                 label: Minimalist
                 value: blockquote-minimal
-            - 
+            -
                 label: Card
                 value: blockquote-floating
             -
@@ -3429,7 +3429,7 @@ settings:
                 value: callout-outlined
             -
                 label: Card
-                value: callout-floating   
+                value: callout-floating
     -
         id: checkbox-options
         title: Checkboxes
@@ -3501,7 +3501,7 @@ settings:
                 value: link-em
             -
                 label: Button
-                value: link-button  
+                value: link-button
     -
         id: code-heading
         title: Code
@@ -3531,7 +3531,7 @@ settings:
         title: Code background
         type: variable-select
         default: var(--background-primary-alt)
-        options: 
+        options:
             -
                 label: Default
                 value: var(--background-primary-alt)
@@ -3544,12 +3544,12 @@ settings:
             -
                 label: Background Secondary Alt
                 value: var(--background-secondary-alt)
-            -   
+            -
                 label: Transparent
                 value: transparent
             -
                 label: Accent
-                value: hsla(var(--color-accent-hsl), 0.1)
+                value: hsla(var(--color-accent-hsl), 0.1
 
     -
         id: headings-settings
